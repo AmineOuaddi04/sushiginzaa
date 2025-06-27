@@ -7,11 +7,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Menu', href: '#menu' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Inicio', href: '#home' },
+    { label: 'Galería', href: '#gallery' },
+    { label: 'Menú', href: '#menu' },
+    { label: 'Nosotros', href: '#about' },
+    { label: 'Contacto', href: '#contact' }
   ];
 
   return (
@@ -25,7 +25,7 @@ const Header = () => {
             </div>
             <div>
               <span className="font-playfair text-2xl font-bold text-foreground">Sushi Ginza</span>
-              <p className="text-xs text-muted-foreground -mt-1">Authentic Japanese Cuisine</p>
+              <p className="text-xs text-muted-foreground -mt-1">Auténtica Cocina Japonesa</p>
             </div>
           </div>
 
@@ -46,7 +46,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-              Reserve Table
+              Reservar Mesa
             </Button>
           </div>
 
@@ -74,7 +74,7 @@ const Header = () => {
                 </a>
               ))}
               <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity mt-4 w-full">
-                Reserve Table
+                Reservar Mesa
               </Button>
             </nav>
           </div>

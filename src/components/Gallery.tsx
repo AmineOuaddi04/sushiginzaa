@@ -8,39 +8,39 @@ const Gallery = () => {
   const dishes = [
     {
       id: 1,
-      name: 'Premium Sashimi Selection',
+      name: 'Selección Premium de Sashimi',
       image: '/placeholder.svg',
-      description: 'Fresh cuts of tuna, salmon, and seasonal fish'
+      description: 'Cortes frescos de atún, salmón y pescado de temporada'
     },
     {
       id: 2,
-      name: 'Dragon Roll',
+      name: 'Rollo Dragón',
       image: '/placeholder.svg',
-      description: 'Eel and cucumber topped with avocado'
+      description: 'Anguila y pepino cubiertos con aguacate'
     },
     {
       id: 3,
-      name: 'Chirashi Bowl',
+      name: 'Bowl Chirashi',
       image: '/placeholder.svg',
-      description: 'Assorted sashimi over seasoned sushi rice'
+      description: 'Sashimi variado sobre arroz de sushi sazonado'
     },
     {
       id: 4,
-      name: 'Omakase Platter',
+      name: 'Plato Omakase',
       image: '/placeholder.svg',
-      description: 'Chef\'s selection of seasonal specialties'
+      description: 'Selección del chef de especialidades de temporada'
     },
     {
       id: 5,
-      name: 'Wagyu Beef Tataki',
+      name: 'Tataki de Wagyu',
       image: '/placeholder.svg',
-      description: 'Seared wagyu with ponzu and micro greens'
+      description: 'Wagyu sellado con ponzu y microgreens'
     },
     {
       id: 6,
-      name: 'Miso Black Cod',
+      name: 'Bacalao Negro al Miso',
       image: '/placeholder.svg',
-      description: 'Marinated cod with sweet miso glaze'
+      description: 'Bacalao marinado con glaseado dulce de miso'
     }
   ];
 
@@ -50,10 +50,10 @@ const Gallery = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="text-gradient">Signature Dishes</span>
+            Nuestros <span className="text-gradient">Platos Especiales</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Each dish is a masterpiece, crafted with precision and passion
+            Cada plato es una obra maestra, elaborada con precisión y pasión
           </p>
         </div>
 
@@ -87,7 +87,7 @@ const Gallery = () => {
         {/* View More Button */}
         <div className="text-center mt-12">
           <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity rounded-lg text-primary-foreground font-medium">
-            View Full Gallery
+            Ver Galería Completa
           </button>
         </div>
       </div>
@@ -96,7 +96,7 @@ const Gallery = () => {
       {selectedImage && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
           <div className="relative max-w-4xl max-h-full">
-            <img src={selectedImage} alt="Enlarged dish" className="max-w-full max-h-full object-contain" />
+            <img src={selectedImage} alt="Plato ampliado" className="max-w-full max-h-full object-contain" />
             <button 
               className="absolute top-4 right-4 text-white hover:text-primary transition-colors text-2xl"
               onClick={() => setSelectedImage(null)}

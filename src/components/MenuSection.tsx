@@ -4,33 +4,33 @@ import { Card, CardContent } from '@/components/ui/card';
 const MenuSection = () => {
   const menuCategories = [
     {
-      title: 'Sushi & Sashimi',
-      description: 'Fresh, premium grade fish',
+      title: 'Sushi y Sashimi',
+      description: 'Pescado fresco de grado premium',
       items: [
-        { name: 'Tuna (Maguro)', price: '$3.50', description: 'Bluefin tuna, melt-in-your-mouth texture' },
-        { name: 'Salmon (Sake)', price: '$3.00', description: 'Norwegian salmon, rich and buttery' },
-        { name: 'Yellowtail (Hamachi)', price: '$4.00', description: 'Japanese yellowtail, delicate flavor' },
-        { name: 'Sea Urchin (Uni)', price: '$6.50', description: 'Hokkaido uni, creamy ocean essence' }
+        { name: 'Atún (Maguro)', price: '$3.50', description: 'Atún aleta azul, textura que se derrite en la boca' },
+        { name: 'Salmón (Sake)', price: '$3.00', description: 'Salmón noruego, rico y mantecoso' },
+        { name: 'Pez Limón (Hamachi)', price: '$4.00', description: 'Pez limón japonés, sabor delicado' },
+        { name: 'Erizo de Mar (Uni)', price: '$6.50', description: 'Uni de Hokkaido, esencia cremosa del océano' }
       ]
     },
     {
-      title: 'Specialty Rolls',
-      description: 'Chef\'s creative combinations',
+      title: 'Rollos Especiales',
+      description: 'Combinaciones creativas del chef',
       items: [
-        { name: 'Ginza Dragon Roll', price: '$18', description: 'Eel, cucumber, topped with avocado and eel sauce' },
-        { name: 'Spicy Tuna Crispy', price: '$16', description: 'Spicy tuna, tempura flakes, spicy mayo' },
-        { name: 'Rainbow Paradise', price: '$20', description: 'California base topped with 5 types of sashimi' },
-        { name: 'Fire Mountain', price: '$22', description: 'Salmon, jalapeño, topped with torched spicy mayo' }
+        { name: 'Rollo Dragón Ginza', price: '$18', description: 'Anguila, pepino, cubierto con aguacate y salsa de anguila' },
+        { name: 'Atún Picante Crujiente', price: '$16', description: 'Atún picante, hojuelas de tempura, mayonesa picante' },
+        { name: 'Paraíso Arcoíris', price: '$20', description: 'Base California cubierta con 5 tipos de sashimi' },
+        { name: 'Montaña de Fuego', price: '$22', description: 'Salmón, jalapeño, cubierto con mayonesa picante flameada' }
       ]
     },
     {
-      title: 'Traditional Dishes',
-      description: 'Authentic Japanese flavors',
+      title: 'Platos Tradicionales',
+      description: 'Sabores auténticos japoneses',
       items: [
-        { name: 'Chirashi Bowl', price: '$28', description: 'Chef\'s selection of sashimi over sushi rice' },
-        { name: 'Miso Black Cod', price: '$32', description: '48-hour marinated Alaskan black cod' },
-        { name: 'Wagyu Beef Tataki', price: '$45', description: 'Seared A5 wagyu with ponzu and wasabi' },
-        { name: 'Tempura Omakase', price: '$25', description: 'Seasonal vegetables and shrimp tempura' }
+        { name: 'Bowl Chirashi', price: '$28', description: 'Selección del chef de sashimi sobre arroz de sushi' },
+        { name: 'Bacalao Negro al Miso', price: '$32', description: 'Bacalao de Alaska marinado por 48 horas' },
+        { name: 'Tataki de Wagyu', price: '$45', description: 'Wagyu A5 sellado con ponzu y wasabi' },
+        { name: 'Tempura Omakase', price: '$25', description: 'Verduras de temporada y tempura de camarones' }
       ]
     }
   ];
@@ -41,10 +41,10 @@ const MenuSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="text-gradient">Menu</span>
+            Nuestro <span className="text-gradient">Menú</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Carefully curated dishes showcasing the finest ingredients and traditional techniques
+            Platos cuidadosamente seleccionados que muestran los mejores ingredientes y técnicas tradicionales
           </p>
         </div>
 
@@ -80,9 +80,9 @@ const MenuSection = () => {
         <div className="text-center mt-16">
           <div className="inline-block bg-gradient-to-r from-primary to-accent p-px rounded-lg">
             <div className="bg-background px-8 py-4 rounded-lg">
-              <p className="text-muted-foreground mb-4">Ready to experience authentic Japanese cuisine?</p>
+              <p className="text-muted-foreground mb-4">¿Listo para experimentar la auténtica cocina japonesa?</p>
               <button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity px-6 py-3 rounded-lg text-primary-foreground font-medium">
-                Make a Reservation
+                Hacer una Reservación
               </button>
             </div>
           </div>

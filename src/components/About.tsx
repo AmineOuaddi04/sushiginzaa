@@ -6,23 +6,23 @@ const About = () => {
   const features = [
     {
       icon: Award,
-      title: 'Award Winning',
-      description: 'Recognized for excellence in Japanese cuisine and service'
+      title: 'Galardonado',
+      description: 'Reconocido por la excelencia en cocina japonesa y servicio'
     },
     {
       icon: Utensils,
-      title: 'Master Chefs',
-      description: 'Trained in traditional Japanese culinary techniques'
+      title: 'Chefs Maestros',
+      description: 'Entrenados en técnicas culinarias tradicionales japonesas'
     },
     {
       icon: Clock,
-      title: 'Fresh Daily',
-      description: 'Fish flown in daily from Tokyo\'s Tsukiji market'
+      title: 'Fresco Diario',
+      description: 'Pescado traído diariamente del mercado Tsukiji de Tokio'
     },
     {
       icon: Users,
-      title: 'Family Owned',
-      description: 'Three generations of authentic Japanese cooking'
+      title: 'Empresa Familiar',
+      description: 'Tres generaciones de auténtica cocina japonesa'
     }
   ];
 
@@ -33,25 +33,25 @@ const About = () => {
           {/* Content */}
           <div className="animate-slide-in">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="text-gradient">Story</span>
+              Nuestra <span className="text-gradient">Historia</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Founded in 2008 by Master Chef Hiroshi Tanaka, Sakura represents three generations 
-              of Japanese culinary tradition. Our commitment to authenticity and quality has made 
-              us a cornerstone of the local dining scene.
+              Fundado en 2008 por el Chef Maestro Hiroshi Tanaka, Sakura representa tres generaciones 
+              de tradición culinaria japonesa. Nuestro compromiso con la autenticidad y calidad nos ha convertido 
+              en una piedra angular de la escena gastronómica local.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              We source the finest ingredients, from premium sushi-grade fish to authentic Japanese 
-              seasonings, ensuring every dish reflects the true essence of Japanese cuisine while 
-              embracing modern presentation techniques.
+              Obtenemos los mejores ingredientes, desde pescado premium grado sushi hasta condimentos 
+              auténticos japoneses, asegurando que cada plato refleje la verdadera esencia de la cocina japonesa 
+              mientras abraza técnicas de presentación modernas.
             </p>
             
             {/* Quote */}
             <div className="gradient-border">
               <div className="gradient-border-content">
                 <blockquote className="text-foreground italic">
-                  "True Japanese cuisine is not just about food—it's about respect, precision, 
-                  and the art of bringing people together."
+                  "La verdadera cocina japonesa no se trata solo de comida—se trata de respeto, precisión, 
+                  y el arte de unir a las personas."
                 </blockquote>
                 <cite className="text-sm text-muted-foreground mt-2 block">— Chef Hiroshi Tanaka</cite>
               </div>

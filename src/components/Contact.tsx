@@ -7,23 +7,23 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Location',
-      details: ['123 Sakura Street', 'Downtown District', 'City, State 12345']
+      title: 'Ubicación',
+      details: ['Calle Sakura 123', 'Distrito Centro', 'Ciudad, Estado 12345']
     },
     {
       icon: Phone,
-      title: 'Phone',
-      details: ['(555) 123-4567', 'Call for reservations']
+      title: 'Teléfono',
+      details: ['(555) 123-4567', 'Llama para reservaciones']
     },
     {
       icon: Clock,
-      title: 'Hours',
-      details: ['Mon-Thu: 5:00 PM - 10:00 PM', 'Fri-Sat: 5:00 PM - 11:00 PM', 'Sun: 4:00 PM - 9:00 PM']
+      title: 'Horarios',
+      details: ['Lun-Jue: 5:00 PM - 10:00 PM', 'Vie-Sáb: 5:00 PM - 11:00 PM', 'Dom: 4:00 PM - 9:00 PM']
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@sakura-restaurant.com', 'events@sakura-restaurant.com']
+      details: ['info@sakura-restaurant.com', 'eventos@sakura-restaurant.com']
     }
   ];
 
@@ -33,10 +33,10 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-            Visit <span className="text-gradient">Sakura</span>
+            Visita <span className="text-gradient">Sakura</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience authentic Japanese cuisine in the heart of the city
+            Experimenta la auténtica cocina japonesa en el corazón de la ciudad
           </p>
         </div>
 
@@ -63,16 +63,16 @@ const Contact = () => {
         <div className="text-center">
           <div className="gradient-border inline-block">
             <div className="gradient-border-content text-center">
-              <h3 className="font-playfair text-2xl font-semibold mb-4">Ready to Experience Sakura?</h3>
+              <h3 className="font-playfair text-2xl font-semibold mb-4">¿Listo para Experimentar Sakura?</h3>
               <p className="text-muted-foreground mb-6">
-                Reserve your table today and embark on a culinary journey through Japan
+                Reserva tu mesa hoy y embárcate en un viaje culinario por Japón
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-                  Make Reservation
+                  Hacer Reservación
                 </Button>
                 <Button size="lg" variant="outline" className="border-border hover:bg-secondary/50">
-                  View Full Menu
+                  Ver Menú Completo
                 </Button>
               </div>
             </div>
