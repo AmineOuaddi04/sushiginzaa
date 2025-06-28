@@ -111,25 +111,6 @@ const MenuSection = () => {
             </Card>
           ))}
         </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="inline-block bg-gradient-to-r from-primary to-accent p-px rounded-lg">
-            <div className="bg-background px-8 py-4 rounded-lg">
-              <Button 
-                onClick={() => window.open('https://drive.google.com/file/d/1LOjRr_1jNvt1DckffBy1rbutaSqAei-9/view?usp=sharing', '_blank')}
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity px-6 py-3 rounded-lg text-primary-foreground font-medium"
-              >
-                <EditableText 
-                  contentKey="menu.cta.button"
-                  as="span"
-                >
-                  Ver menú completo
-                </EditableText>
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
