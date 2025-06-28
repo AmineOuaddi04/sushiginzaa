@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const dishes = [
     {
@@ -64,7 +64,8 @@ const Gallery = () => {
               key={dish.id}
               className="group bg-card/50 border-border hover:border-primary/30 transition-all duration-300 cursor-pointer animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => setSelectedImage(dish.image)}
+              onMouseEnter={() => setHoveredImage(dish.image)}
+              onMouseLeave={() => setHoveredImage(null)}
             >
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
@@ -94,24 +95,15 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Modal for enlarged image */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl max-h-full">
+      {/* Hover Preview Modal */}
+      {hoveredImage && (
+        <div className="fixed inset-0 pointer-events-none z-40 flex items-center justify-center p-4">
+          <div className="relative max-w-lg max-h-96 animate-scale-in">
             <img
-              src={selectedImage}
-              alt="Plato ampliado"
-              className="max-w-full max-h-full object-contain"
+              src={hoveredImage}
+              alt="Vista previa del plato"
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl border border-primary/20"
             />
-            <button
-              className="absolute top-4 right-4 text-white hover:text-primary transition-colors text-2xl"
-              onClick={() => setSelectedImage(null)}
-            >
-              ×
-            </button>
           </div>
         </div>
       )}
