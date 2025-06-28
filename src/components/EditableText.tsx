@@ -8,13 +8,15 @@ interface EditableTextProps {
   className?: string;
   as?: keyof JSX.IntrinsicElements;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
 const EditableText: React.FC<EditableTextProps> = ({ 
   contentKey, 
   className, 
   as: Component = 'span',
-  children 
+  children,
+  style
 }) => {
   const { isEditMode, content, updateContent } = useEditable();
   const [isEditing, setIsEditing] = useState(false);
@@ -68,6 +70,7 @@ const EditableText: React.FC<EditableTextProps> = ({
           "bg-transparent border-b-2 border-primary outline-none",
           className
         )}
+        style={style}
       />
     );
   }
@@ -79,6 +82,7 @@ const EditableText: React.FC<EditableTextProps> = ({
         isEditMode && "cursor-pointer hover:bg-primary/10 hover:outline hover:outline-1 hover:outline-primary/30 rounded px-1 transition-all"
       )}
       onClick={handleClick}
+      style={style}
     >
       {currentContent}
     </Component>
