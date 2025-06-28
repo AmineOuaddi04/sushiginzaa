@@ -1,5 +1,5 @@
 
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import EditableText from '@/components/EditableText';
 
@@ -49,14 +49,15 @@ const Hero = () => {
           style={{ animationDelay: '0.2s' }}
         />
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
+        {/* CTA Button - Only one button now */}
+        <div className="flex justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
+            onClick={() => window.open('https://drive.google.com/file/d/1LOjRr_1jNvt1DckffBy1rbutaSqAei-9/view?usp=sharing', '_blank')}
+          >
             <EditableText contentKey="hero.cta1" />
             <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
-          <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10 text-foreground">
-            <EditableText contentKey="hero.cta2" />
           </Button>
         </div>
       </div>
