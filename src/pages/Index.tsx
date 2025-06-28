@@ -6,20 +6,23 @@ import MenuSection from '@/components/MenuSection';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { EditableProvider } from '@/contexts/EditableContext';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <Gallery />
-        <MenuSection />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <EditableProvider>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <Hero />
+          <Gallery />
+          <MenuSection />
+          <About />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </EditableProvider>
   );
 };
 

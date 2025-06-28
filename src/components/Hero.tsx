@@ -1,6 +1,7 @@
 
 import { ArrowRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import EditableText from '@/components/EditableText';
 
 const Hero = () => {
   return (
@@ -18,30 +19,44 @@ const Hero = () => {
         {/* Restaurant Badge */}
         <div className="inline-flex items-center space-x-2 bg-background/20 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3 mb-8 animate-fade-in">
           <span className="text-2xl">🍣</span>
-          <span className="text-sm font-medium text-foreground">Auténtica Cocina Japonesa</span>
+          <EditableText 
+            contentKey="hero.badge"
+            className="text-sm font-medium text-foreground"
+            as="span"
+          />
         </div>
 
         {/* Main Heading */}
         <h1 className="font-playfair text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
-          <span className="text-foreground">Sushi</span>
+          <EditableText 
+            contentKey="hero.title.line1"
+            className="text-foreground block"
+            as="span"
+          />
           <br />
-          <span className="text-gradient">Ginza</span>
+          <EditableText 
+            contentKey="hero.title.line2"
+            className="text-gradient"
+            as="span"
+          />
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Donde la tradición se encuentra con la innovación. Experimenta el mejor sushi elaborado por nuestros chefs maestros 
-          utilizando los ingredientes más frescos de Japón.
-        </p>
+        <EditableText 
+          contentKey="hero.subtitle"
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in block"
+          as="p"
+          style={{ animationDelay: '0.2s' }}
+        />
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-            Ver Nuestro Menú
+            <EditableText contentKey="hero.cta1" />
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
           <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10 text-foreground">
-            Reservar Mesa
+            <EditableText contentKey="hero.cta2" />
           </Button>
         </div>
       </div>

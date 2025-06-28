@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import EditableText from '@/components/EditableText';
 
 const Gallery = () => {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
@@ -50,11 +51,15 @@ const Gallery = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-            Nuestros <span className="text-gradient">Platos Especiales</span>
+            <EditableText contentKey="gallery.title" className="inline" />
+            {' '}
+            <EditableText contentKey="gallery.title.accent" className="text-gradient inline" />
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Cada plato es una obra maestra, elaborada con precisión y pasión
-          </p>
+          <EditableText 
+            contentKey="gallery.subtitle"
+            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            as="p"
+          />
         </div>
 
         {/* Gallery Grid */}
@@ -90,7 +95,7 @@ const Gallery = () => {
         {/* View More Button */}
         <div className="text-center mt-12">
           <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity rounded-lg text-primary-foreground font-medium">
-            Ver Galería Completa
+            <EditableText contentKey="gallery.cta" />
           </button>
         </div>
       </div>

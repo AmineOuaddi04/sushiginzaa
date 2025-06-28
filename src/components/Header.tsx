@@ -1,17 +1,20 @@
-
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Edit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useEditable } from '@/contexts/EditableContext';
+import EditableText from '@/components/EditableText';
+import { cn } from '@/lib/utils';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isEditMode, setIsEditMode } = useEditable();
 
   const navItems = [
-    { label: 'Inicio', href: '#home' },
-    { label: 'Galería', href: '#gallery' },
-    { label: 'Menú', href: '#menu' },
-    { label: 'Nosotros', href: '#about' },
-    { label: 'Contacto', href: '#contact' }
+    { label: 'header.nav.inicio', href: '#home' },
+    { label: 'header.nav.galeria', href: '#gallery' },
+    { label: 'header.nav.menu', href: '#menu' },
+    { label: 'header.nav.nosotros', href: '#about' },
+    { label: 'header.nav.contacto', href: '#contact' }
   ];
 
   return (
@@ -24,8 +27,16 @@ const Header = () => {
               <span className="text-primary-foreground font-bold text-xl">鮨</span>
             </div>
             <div>
-              <span className="font-playfair text-2xl font-bold text-foreground">Sushi Ginza</span>
-              <p className="text-xs text-muted-foreground -mt-1">Auténtica Cocina Japonesa</p>
+              <EditableText 
+                contentKey="header.title"
+                className="font-playfair text-2xl font-bold text-foreground"
+                as="span"
+              />
+              <EditableText 
+                contentKey="header.subtitle"
+                className="text-xs text-muted-foreground -mt-1 block"
+                as="p"
+              />
             </div>
           </div>
 
@@ -37,16 +48,28 @@ const Header = () => {
                 href={item.href} 
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
               >
-                {item.label}
+                <EditableText contentKey={item.label} />
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Edit Button & CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsEditMode(!isEditMode)}
+              className={cn(
+                "transition-colors",
+                isEditMode && "bg-primary text-primary-foreground"
+              )}
+            >
+              <Edit size={16} className="mr-2" />
+              {isEditMode ? 'Exit Edit' : 'Edit'}
+            </Button>
             <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-              Reservar Mesa
+              <EditableText contentKey="header.cta" />
             </Button>
           </div>
 
@@ -70,12 +93,26 @@ const Header = () => {
                   className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.label}
+                  <EditableText contentKey={item.label} />
                 </a>
               ))}
-              <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity mt-4 w-full">
-                Reservar Mesa
-              </Button>
+              <div className="flex items-center space-x-2 mt-4">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setIsEditMode(!isEditMode)}
+                  className={cn(
+                    "transition-colors",
+                    isEditMode && "bg-primary text-primary-foreground"
+                  )}
+                >
+                  <Edit size={16} className="mr-2" />
+                  {isEditMode ? 'Exit Edit' : 'Edit'}
+                </Button>
+                <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity flex-1">
+                  <EditableText contentKey="header.cta" />
+                </Button>
+              </div>
             </nav>
           </div>
         )}
