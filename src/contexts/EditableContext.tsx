@@ -40,7 +40,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'hero.title.line1': 'Sushi',
     'hero.title.line2': 'Ginza',
     'hero.subtitle': 'Donde la tradición se encuentra con la innovación. Experimenta el mejor sushi elaborado por nuestros chefs maestros utilizando los ingredientes más frescos de Japón.',
-    'hero.cta1': 'Ver Nuestro Menú',
+    'hero.cta1': 'Ver Menú Completo',
     'hero.cta2': 'Reservar Mesa',
     
     // Gallery content
