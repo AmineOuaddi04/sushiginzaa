@@ -2,18 +2,19 @@
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import EditableText from '@/components/EditableText';
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
       title: 'Ubicación',
-      details: ['Calle Sakura 123', 'Distrito Centro', 'Ciudad, Estado 12345']
+      details: ['Calle Chile, 6', '26005 Logroño', 'La Rioja']
     },
     {
       icon: Phone,
       title: 'Teléfono',
-      details: ['(555) 123-4567', 'Llama para reservaciones']
+      details: ['941233212', 'Llama para reservaciones']
     },
     {
       icon: Clock,
@@ -23,7 +24,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@sakura-restaurant.com', 'eventos@sakura-restaurant.com']
+      details: ['info@sushi-ginza.com', 'eventos@sushi-ginza.com']
     }
   ];
 
@@ -33,11 +34,15 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-            Visita <span className="text-gradient">Sakura</span>
+            <EditableText contentKey="contact.title" className="inline" />
+            {' '}
+            <EditableText contentKey="contact.title.accent" className="text-gradient inline" />
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experimenta la auténtica cocina japonesa en el corazón de la ciudad
-          </p>
+          <EditableText 
+            contentKey="contact.subtitle"
+            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            as="p"
+          />
         </div>
 
         {/* Contact Grid */}
@@ -48,10 +53,23 @@ const Contact = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mx-auto mb-4">
                   <info.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h3 className="font-semibold mb-3">{info.title}</h3>
+                <EditableText 
+                  contentKey={`contact.info.${index}.title`}
+                  className="font-semibold mb-3"
+                  as="h3"
+                >
+                  {info.title}
+                </EditableText>
                 <div className="space-y-1">
                   {info.details.map((detail, i) => (
-                    <p key={i} className="text-sm text-muted-foreground">{detail}</p>
+                    <EditableText 
+                      key={i}
+                      contentKey={`contact.info.${index}.detail.${i}`}
+                      className="text-sm text-muted-foreground block"
+                      as="p"
+                    >
+                      {detail}
+                    </EditableText>
                   ))}
                 </div>
               </CardContent>
@@ -63,16 +81,22 @@ const Contact = () => {
         <div className="text-center">
           <div className="gradient-border inline-block">
             <div className="gradient-border-content text-center">
-              <h3 className="font-playfair text-2xl font-semibold mb-4">¿Listo para Experimentar Sakura?</h3>
-              <p className="text-muted-foreground mb-6">
-                Reserva tu mesa hoy y embárcate en un viaje culinario por Japón
-              </p>
+              <EditableText 
+                contentKey="contact.cta.title"
+                className="font-playfair text-2xl font-semibold mb-4"
+                as="h3"
+              />
+              <EditableText 
+                contentKey="contact.cta.subtitle"
+                className="text-muted-foreground mb-6"
+                as="p"
+              />
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-                  Hacer Reservación
+                  <EditableText contentKey="contact.cta.button1" />
                 </Button>
                 <Button size="lg" variant="outline" className="border-border hover:bg-secondary/50">
-                  Ver Menú Completo
+                  <EditableText contentKey="contact.cta.button2" />
                 </Button>
               </div>
             </div>
