@@ -1,33 +1,24 @@
-
 import { Award, Clock, Users, Utensils } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const About = () => {
-  const features = [
-    {
-      icon: Award,
-      title: 'Galardonado',
-      description: 'Reconocido por la excelencia en cocina japonesa y servicio'
-    },
-    {
-      icon: Utensils,
-      title: 'Chefs Maestros',
-      description: 'Entrenados en técnicas culinarias tradicionales japonesas'
-    },
-    {
-      icon: Clock,
-      title: 'Fresco Diario',
-      description: 'Pescado traído diariamente del mercado Tsukiji de Tokio'
-    },
-    {
-      icon: Users,
-      title: 'Empresa Familiar',
-      description: 'Tres generaciones de auténtica cocina japonesa'
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20">
+  const features = [{
+    icon: Award,
+    title: 'Galardonado',
+    description: 'Reconocido por la excelencia en cocina japonesa y servicio'
+  }, {
+    icon: Utensils,
+    title: 'Chefs Maestros',
+    description: 'Entrenados en técnicas culinarias tradicionales japonesas'
+  }, {
+    icon: Clock,
+    title: 'Fresco Diario',
+    description: 'Pescado traído diariamente del mercado Tsukiji de Tokio'
+  }, {
+    icon: Users,
+    title: 'Empresa Familiar',
+    description: 'Tres generaciones de auténtica cocina japonesa'
+  }];
+  return <section id="about" className="py-20">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -49,10 +40,7 @@ const About = () => {
             {/* Quote */}
             <div className="gradient-border">
               <div className="gradient-border-content">
-                <blockquote className="text-foreground italic">
-                  "La verdadera cocina japonesa no se trata solo de comida—se trata de respeto, precisión, 
-                  y el arte de unir a las personas."
-                </blockquote>
+                <blockquote className="text-foreground italic">"La verdadera cocina japonesa no se trata solo de comida—se trata de respeto, precisión, y el arte de unir a las personas."</blockquote>
                 <cite className="text-sm text-muted-foreground mt-2 block">— Chef Hiroshi Tanaka</cite>
               </div>
             </div>
@@ -60,8 +48,9 @@ const About = () => {
 
           {/* Features Grid */}
           <div className="grid sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <Card key={feature.title} className="bg-card/50 border-border hover:border-primary/20 transition-colors duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            {features.map((feature, index) => <Card key={feature.title} className="bg-card/50 border-border hover:border-primary/20 transition-colors duration-300 animate-fade-in" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-6 h-6 text-primary-foreground" />
@@ -69,13 +58,10 @@ const About = () => {
                   <h3 className="font-semibold mb-2">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
