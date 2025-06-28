@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu, X, Edit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,7 +13,7 @@ const Header = () => {
   const navItems = [
     { label: 'header.nav.inicio', href: '#home' },
     { label: 'header.nav.galeria', href: '#gallery' },
-    { label: 'header.nav.menu', href: '#menu' },
+    { label: 'header.nav.menu', href: 'https://drive.google.com/file/d/1LOjRr_1jNvt1DckffBy1rbutaSqAei-9/view?usp=sharing' },
     { label: 'header.nav.nosotros', href: '#about' },
     { label: 'header.nav.contacto', href: '#contact' }
   ];
@@ -45,7 +46,9 @@ const Header = () => {
             {navItems.map(item => (
               <a 
                 key={item.label} 
-                href={item.href} 
+                href={item.href}
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
               >
                 <EditableText contentKey={item.label} />
@@ -54,7 +57,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Edit Button & CTA Button */}
+          {/* Edit Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Button
               variant="outline"
@@ -67,9 +70,6 @@ const Header = () => {
             >
               <Edit size={16} className="mr-2" />
               {isEditMode ? 'Exit Edit' : 'Edit'}
-            </Button>
-            <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-              <EditableText contentKey="header.cta" />
             </Button>
           </div>
 
@@ -89,7 +89,9 @@ const Header = () => {
               {navItems.map(item => (
                 <a 
                   key={item.label} 
-                  href={item.href} 
+                  href={item.href}
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -108,9 +110,6 @@ const Header = () => {
                 >
                   <Edit size={16} className="mr-2" />
                   {isEditMode ? 'Exit Edit' : 'Edit'}
-                </Button>
-                <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity flex-1">
-                  <EditableText contentKey="header.cta" />
                 </Button>
               </div>
             </nav>

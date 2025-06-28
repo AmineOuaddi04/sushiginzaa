@@ -1,7 +1,6 @@
 
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import EditableText from '@/components/EditableText';
 
 const Contact = () => {
@@ -14,7 +13,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Teléfono',
-      details: ['941233212', 'Llama para reservaciones']
+      details: ['941233212', 'Llama para consultas']
     },
     {
       icon: Clock,
@@ -46,7 +45,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {contactInfo.map((info, index) => (
             <Card key={info.title} className="bg-card/50 border-border hover:border-primary/20 transition-colors duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-6 text-center">
@@ -75,32 +74,6 @@ const Contact = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="gradient-border inline-block">
-            <div className="gradient-border-content text-center">
-              <EditableText 
-                contentKey="contact.cta.title"
-                className="font-playfair text-2xl font-semibold mb-4"
-                as="h3"
-              />
-              <EditableText 
-                contentKey="contact.cta.subtitle"
-                className="text-muted-foreground mb-6"
-                as="p"
-              />
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-                  <EditableText contentKey="contact.cta.button1" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-border hover:bg-secondary/50">
-                  <EditableText contentKey="contact.cta.button2" />
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

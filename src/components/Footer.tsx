@@ -1,5 +1,5 @@
 
-import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
 import EditableText from '@/components/EditableText';
 
 const Footer = () => {
@@ -25,14 +25,13 @@ const Footer = () => {
               as="p"
             />
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
+              <a 
+                href="https://www.instagram.com/sushiginzalogrono/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
+              >
                 <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
-                <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
-                <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />
               </a>
             </div>
           </div>
@@ -46,10 +45,9 @@ const Footer = () => {
             />
             <ul className="space-y-2">
               <li><a href="#home" className="text-muted-foreground hover:text-foreground transition-colors"><EditableText contentKey="footer.links.home" /></a></li>
-              <li><a href="#menu" className="text-muted-foreground hover:text-foreground transition-colors"><EditableText contentKey="footer.links.menu" /></a></li>
+              <li><a href="https://drive.google.com/file/d/1LOjRr_1jNvt1DckffBy1rbutaSqAei-9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors"><EditableText contentKey="footer.links.menu" /></a></li>
               <li><a href="#about" className="text-muted-foreground hover:text-foreground transition-colors"><EditableText contentKey="footer.links.about" /></a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors"><EditableText contentKey="footer.links.contact" /></a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><EditableText contentKey="footer.links.reservations" /></a></li>
             </ul>
           </div>
 
