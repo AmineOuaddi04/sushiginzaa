@@ -81,10 +81,20 @@ const Gallery = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-playfair text-xl font-semibold text-white mb-2">
+                    <EditableText
+                      contentKey={`gallery.dish.${index}.name`}
+                      className="font-playfair text-xl font-semibold text-white mb-2"
+                      as="h3"
+                    >
                       {dish.name}
-                    </h3>
-                    <p className="text-white/80 text-sm">{dish.description}</p>
+                    </EditableText>
+                    <EditableText
+                      contentKey={`gallery.dish.${index}.description`}
+                      className="text-white/80 text-sm"
+                      as="p"
+                    >
+                      {dish.description}
+                    </EditableText>
                   </div>
                 </div>
               </CardContent>
