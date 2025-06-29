@@ -111,6 +111,16 @@ const MenuSection = () => {
             </Card>
           ))}
         </div>
+
+        {/* Ver Menú Completo Button */}
+        <div className="text-center mt-16">
+          <Button 
+            onClick={() => window.open('https://drive.google.com/file/d/1LOjRr_1jNvt1DckffBy1rbutaSqAei-9/view?usp=sharing', '_blank')}
+            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity px-8 py-3 rounded-lg text-primary-foreground font-medium text-lg"
+          >
+            Ver Menú Completo
+          </Button>
+        </div>
       </div>
     </section>
   );
