@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import EditableText from '@/components/EditableText';
@@ -41,6 +42,24 @@ const Gallery = () => {
       name: 'Bacalao Negro al Miso',
       image: '/lovable-uploads/ecb5149b-d6ab-46a7-8dc0-296a02663243.png',
       description: 'Bacalao marinado con glaseado dulce de miso'
+    },
+    {
+      id: 7,
+      name: 'Ramen Tonkotsu Premium',
+      image: '/lovable-uploads/7603660f-79a6-499b-9973-e4e8c9cfcdc9.png',
+      description: 'Caldo rico de hueso de cerdo con chashu y huevo marinado'
+    },
+    {
+      id: 8,
+      name: 'Ramen Miso Especial',
+      image: '/lovable-uploads/4b202630-3591-487d-893e-f5a1bc4521b4.png',
+      description: 'Base de miso cremoso con chashu y verduras frescas'
+    },
+    {
+      id: 9,
+      name: 'Ramen Picante Especial',
+      image: '/lovable-uploads/36fb6d2b-f6b4-4caf-a243-34f21136f816.png',
+      description: 'Caldo picante con carne molida y huevo perfectamente cocido'
     }
   ];
 

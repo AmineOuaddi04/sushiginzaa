@@ -61,6 +61,12 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.4.description': 'Wagyu A5 sellado ligeramente, marinado en salsa ponzu, cebollín japonés, microgreens, escamas de sal marina y aceite de sésamo',
     'gallery.dish.5.name': 'Bacalao Negro al Miso',
     'gallery.dish.5.description': 'Bacalao de Alaska marinado 48 horas en miso blanco, mirin, sake, servido con brotes de soja y cebollín',
+    'gallery.dish.6.name': 'Ramen Tonkotsu Premium',
+    'gallery.dish.6.description': 'Caldo rico de hueso de cerdo cocido 24 horas, fideos frescos, chashu de cerdo, huevo marinado, cebollín y brotes de bambú',
+    'gallery.dish.7.name': 'Ramen Miso Especial',
+    'gallery.dish.7.description': 'Base cremosa de miso rojo y blanco, fideos artesanales, chashu tierno, huevo mollet, maíz dulce y algas nori',
+    'gallery.dish.8.name': 'Ramen Picante Especial',
+    'gallery.dish.8.description': 'Caldo picante con pasta de chile gochujang, carne molida sazonada, huevo perfectamente cocido, cebollín fresco y semillas de sésamo',
 
     // Menu content
     'menu.title': 'Nuestro',
