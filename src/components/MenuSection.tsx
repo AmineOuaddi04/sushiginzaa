@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import EditableText from '@/components/EditableText';
@@ -112,13 +111,20 @@ const MenuSection = () => {
           ))}
         </div>
 
-        {/* Ver Menú Completo Button */}
-        <div className="text-center mt-16">
+        {/* Action Buttons */}
+        <div className="text-center mt-16 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
           <Button 
             onClick={() => window.open('https://drive.google.com/file/d/1LOjRr_1jNvt1DckffBy1rbutaSqAei-9/view?usp=sharing', '_blank')}
-            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity px-8 py-3 rounded-lg text-primary-foreground font-medium text-lg"
+            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity px-8 py-3 rounded-lg text-primary-foreground font-medium text-lg w-full sm:w-auto"
           >
             Ver Menú Completo
+          </Button>
+          <Button 
+            onClick={() => window.open('https://www.google.com/maps/place/Sushi+Ginza/@42.4650282,-2.4445982,17z/data=!4m8!3m7!1s0xd4fc31d4e8b51b5:0x123456789abcdef!8m2!3d42.4650282!4d-2.4424095!9m1!1b1!16s%2Fg%2F11c5b7x8y9?entry=ttu', '_blank')}
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors px-8 py-3 rounded-lg font-medium text-lg w-full sm:w-auto"
+          >
+            Ver Reseñas
           </Button>
         </div>
       </div>
