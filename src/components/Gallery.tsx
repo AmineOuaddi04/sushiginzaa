@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import EditableText from '@/components/EditableText';
@@ -10,37 +9,37 @@ const Gallery = () => {
     {
       id: 1,
       name: 'Selección Premium de Sashimi',
-      image: '/lovable-uploads/2f8b2836-1194-49e9-859c-3d0509070e51.png',
+      image: '/lovable-uploads/e1cdef30-bf46-4d1d-ac86-92e81807a7d5.png',
       description: 'Cortes frescos de atún, salmón y pescado de temporada'
     },
     {
       id: 2,
       name: 'Rollo Dragón',
-      image: '/lovable-uploads/3fded1ab-84b3-4889-8f28-b7d37ff8d6ac.png',
+      image: '/lovable-uploads/4882d411-3284-4956-88e5-da3da97cd569.png',
       description: 'Anguila y pepino cubiertos con aguacate'
     },
     {
       id: 3,
       name: 'Bowl Chirashi',
-      image: '/lovable-uploads/2ba4865c-1f73-4dd5-ac12-8b00e7b3a218.png',
+      image: '/lovable-uploads/18cd7e5d-68ec-4b6e-a5cf-6e5c247cf772.png',
       description: 'Sashimi variado sobre arroz de sushi sazonado'
     },
     {
       id: 4,
       name: 'Plato Omakase',
-      image: '/lovable-uploads/b97f374d-cd46-4a2b-8292-f65d4656d801.png',
+      image: '/lovable-uploads/7ff5e928-f160-4e47-855f-115573be669d.png',
       description: 'Selección del chef de especialidades de temporada'
     },
     {
       id: 5,
       name: 'Tataki de Wagyu',
-      image: '/lovable-uploads/8d5c42d9-0c97-4ffd-bf00-10b14b4ba370.png',
+      image: '/lovable-uploads/6c2d3ea0-56b4-441e-a307-1811c67f47de.png',
       description: 'Wagyu sellado con ponzu y microgreens'
     },
     {
       id: 6,
       name: 'Bacalao Negro al Miso',
-      image: '/lovable-uploads/167bc9ad-4de4-4eb0-8111-46fe24f1e085.png',
+      image: '/lovable-uploads/ecb5149b-d6ab-46a7-8dc0-296a02663243.png',
       description: 'Bacalao marinado con glaseado dulce de miso'
     }
   ];
