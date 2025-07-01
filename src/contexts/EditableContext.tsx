@@ -48,6 +48,20 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.subtitle': 'Cada plato es una obra maestra, elaborada con precisión y pasión',
     'gallery.cta': 'Ver Galería Completa',
     
+    // Gallery dish details with ingredients
+    'gallery.dish.0.name': 'Selección Premium de Sashimi',
+    'gallery.dish.0.description': 'Atún rojo, salmón noruego, pez limón japonés, erizo de mar de Hokkaido, servido con wasabi fresco, jengibre encurtido y salsa de soja artesanal',
+    'gallery.dish.1.name': 'Rollo Dragón',
+    'gallery.dish.1.description': 'Anguila glaseada, pepino japonés, aguacate maduro, cubierto con salsa kabayaki, semillas de sésamo tostado y hojuelas de nori',
+    'gallery.dish.2.name': 'Bowl Chirashi',
+    'gallery.dish.2.description': 'Arroz de sushi sazonado con vinagre de arroz, selección diaria de sashimi fresco, tamagoyaki, pepino, rábano daikon y algas wakame',
+    'gallery.dish.3.name': 'Plato Omakase',
+    'gallery.dish.3.description': 'Selección del chef con nigiri de temporada, sashimi premium, rollo especial de la casa y acompañamientos tradicionales japoneses',
+    'gallery.dish.4.name': 'Tataki de Wagyu',
+    'gallery.dish.4.description': 'Wagyu A5 sellado ligeramente, marinado en salsa ponzu, cebollín japonés, microgreens, escamas de sal marina y aceite de sésamo',
+    'gallery.dish.5.name': 'Bacalao Negro al Miso',
+    'gallery.dish.5.description': 'Bacalao de Alaska marinado 48 horas en miso blanco, mirin, sake, servido con brotes de soja y cebollín',
+
     // Menu content
     'menu.title': 'Nuestro',
     'menu.title.accent': 'Menú',
