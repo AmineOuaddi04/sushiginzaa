@@ -68,6 +68,20 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.8.name': 'Ramen Picante Especial',
     'gallery.dish.8.description': 'Caldo picante con pasta de chile gochujang, carne molida sazonada, huevo perfectamente cocido, cebollín fresco y semillas de sésamo',
 
+    // New 6 dishes
+    'gallery.dish.9.name': 'Sashimi Premium Artístico',
+    'gallery.dish.9.description': 'Selección artística de sashimi premium con atún rojo, salmón noruego y pez blanco, presentado con decoración tradicional japonesa y acompañamientos',
+    'gallery.dish.10.name': 'Bowl Kaisen Don',
+    'gallery.dish.10.description': 'Bowl de mariscos frescos con camarones tempura, sashimi variado, masago, tamago y vegetales sobre arroz sushi con salsa especial de la casa',
+    'gallery.dish.11.name': 'Yakisoba Premium',
+    'gallery.dish.11.description': 'Fideos yakisoba salteados con verduras frescas, carne de res tierna, brotes de soja, pimientos y salsa yakisoba artesanal con semillas de sésamo',
+    'gallery.dish.12.name': 'Tataki de Atún Premium',
+    'gallery.dish.12.description': 'Atún rojo de alta calidad sellado por fuera, crudo por dentro, con microgreens, brotes frescos y salsa ponzu con aceite de sésamo',
+    'gallery.dish.13.name': 'Salmón Glaseado Especial',
+    'gallery.dish.13.description': 'Salmón fresco glaseado con salsa teriyaki artesanal, verduras salteadas, brotes de daikon y presentación artística con reducción balsámica',
+    'gallery.dish.14.name': 'Ramen Shoyu Clásico',
+    'gallery.dish.14.description': 'Ramen tradicional con caldo claro de shoyu, fideos frescos, chashu de cerdo tierno, huevo ajitsuke, cebollín fresco y brotes de bambú',
+
     // Menu content
     'menu.title': 'Nuestro',
     'menu.title.accent': 'Menú',

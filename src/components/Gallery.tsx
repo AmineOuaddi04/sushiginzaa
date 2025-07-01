@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import EditableText from '@/components/EditableText';
@@ -60,6 +59,42 @@ const Gallery = () => {
       name: 'Ramen Picante Especial',
       image: '/lovable-uploads/36fb6d2b-f6b4-4caf-a243-34f21136f816.png',
       description: 'Caldo picante con carne molida y huevo perfectamente cocido'
+    },
+    {
+      id: 10,
+      name: 'Sashimi Premium Artístico',
+      image: '/lovable-uploads/2e4ccbfa-d857-41b7-9050-4ba731e55e81.png',
+      description: 'Presentación artística de sashimi premium con decoración tradicional'
+    },
+    {
+      id: 11,
+      name: 'Bowl Kaisen Don',
+      image: '/lovable-uploads/26d06a1b-1a4d-4ed1-8aaa-32c86554e978.png',
+      description: 'Bowl de mariscos frescos sobre arroz con salsa especial'
+    },
+    {
+      id: 12,
+      name: 'Yakisoba Premium',
+      image: '/lovable-uploads/86a5fa91-8b69-41df-8538-74b58bbaa0fb.png',
+      description: 'Fideos salteados con verduras y carne en salsa especial'
+    },
+    {
+      id: 13,
+      name: 'Tataki de Atún Premium',
+      image: '/lovable-uploads/25437ee9-0f42-4541-8c56-846c9f432617.png',
+      description: 'Atún rojo sellado con microgreens y salsa ponzu'
+    },
+    {
+      id: 14,
+      name: 'Salmón Glaseado Especial',
+      image: '/lovable-uploads/e5f96cb9-3691-4906-870e-8fe92724aef4.png',
+      description: 'Salmón con glaseado especial y presentación artística'
+    },
+    {
+      id: 15,
+      name: 'Ramen Shoyu Clásico',
+      image: '/lovable-uploads/f246d935-94bb-4323-a028-769b2feb1d48.png',
+      description: 'Ramen tradicional con caldo de shoyu, chashu y huevo ajitsuke'
     }
   ];
 
