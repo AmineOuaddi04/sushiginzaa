@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import EditableText from '@/components/EditableText';
@@ -5,33 +6,33 @@ import EditableText from '@/components/EditableText';
 const MenuSection = () => {
   const menuCategories = [
     {
-      title: 'Sushi y Sashimi',
-      description: 'Pescado fresco de grado premium',
+      title: 'Entrantes',
+      description: 'Para abrir el apetito',
       items: [
-        { name: 'Atún (Maguro)', price: '$3.50', description: 'Atún aleta azul, textura que se derrite en la boca' },
-        { name: 'Salmón (Sake)', price: '$3.00', description: 'Salmón noruego, rico y mantecoso' },
-        { name: 'Pez Limón (Hamachi)', price: '$4.00', description: 'Pez limón japonés, sabor delicado' },
-        { name: 'Erizo de Mar (Uni)', price: '$6.50', description: 'Uni de Hokkaido, esencia cremosa del océano' }
+        { name: 'Ensalada Especial', price: '€4.50', description: 'Ensalada de salmón, aguacate, frutos secos, salsa de sésamo' },
+        { name: 'Wakame', price: '€3.60', description: 'Algas wakame y sésamo' },
+        { name: 'Ensalada Pepino', price: '€3.60', description: 'Pepino, salsa de sésamo' },
+        { name: 'Kimchi', price: '€3.00', description: 'Ajo, col china con ajo, picante' }
       ]
     },
     {
-      title: 'Rollos Especiales',
+      title: 'Platos Especiales',
       description: 'Combinaciones creativas del chef',
       items: [
-        { name: 'Rollo Dragón Ginza', price: '$18', description: 'Anguila, pepino, cubierto con aguacate y salsa de anguila' },
-        { name: 'Atún Picante Crujiente', price: '$16', description: 'Atún picante, hojuelas de tempura, mayonesa picante' },
-        { name: 'Paraíso Arcoíris', price: '$20', description: 'Base California cubierta con 5 tipos de sashimi' },
-        { name: 'Montaña de Fuego', price: '$22', description: 'Salmón, jalapeño, cubierto con mayonesa picante flameada' }
+        { name: 'Salmón Mango 2U', price: '€5.95', description: 'Salmón, mango, salsa mango' },
+        { name: 'Sashimi Mixto', price: '€12.95', description: 'Sashimi Mixto, cigala, gamba roja, salsa maracuyá' },
+        { name: 'Smoke Salmón 4U', price: '€6.95', description: 'Salmón flameado y ahumado, trufa tobiko, salsa ponzu' },
+        { name: 'Sushi Moriwase', price: '€14.95', description: 'Sashimi salmón x4, nigiri x5, ura x4, gonkan x2' }
       ]
     },
     {
-      title: 'Platos Tradicionales',
+      title: 'Arroz y Tallarines',
       description: 'Sabores auténticos japoneses',
       items: [
-        { name: 'Bowl Chirashi', price: '$28', description: 'Selección del chef de sashimi sobre arroz de sushi' },
-        { name: 'Bacalao Negro al Miso', price: '$32', description: 'Bacalao de Alaska marinado por 48 horas' },
-        { name: 'Tataki de Wagyu', price: '$45', description: 'Wagyu A5 sellado con ponzu y wasabi' },
-        { name: 'Tempura Omakase', price: '$25', description: 'Verduras de temporada y tempura de camarones' }
+        { name: 'Pollo Frito Don', price: '€12.95', description: 'Pollo frito, kimchi, arroz, sésamo' },
+        { name: 'Arroz frito con gambas', price: '€5.95', description: 'Arroz frito, huevo, guisantes, cebolla, zanahoria' },
+        { name: 'Yakisoba con Gamba', price: '€5.95', description: 'Huevo, gamba, verdura' },
+        { name: 'Pad Thai con Ternera', price: '€5.95', description: 'Tallarines de arroz con ternera, verduras, huevo' }
       ]
     }
   ];

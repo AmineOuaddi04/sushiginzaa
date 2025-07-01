@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface EditableContextType {
@@ -48,7 +49,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.subtitle': 'Cada plato es una obra maestra, elaborada con precisión y pasión',
     'gallery.cta': 'Ver Galería Completa',
     
-    // Gallery dish details with ingredients
+    // Gallery dish details with ingredients (removed dishes 6, 7, 8 and renumbered)
     'gallery.dish.0.name': 'Selección Premium de Sashimi',
     'gallery.dish.0.description': 'Atún rojo, salmón noruego, pez limón japonés, erizo de mar de Hokkaido, servido con wasabi fresco, jengibre encurtido y salsa de soja artesanal',
     'gallery.dish.1.name': 'Rollo Dragón',
@@ -61,33 +62,73 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.4.description': 'Wagyu A5 sellado ligeramente, marinado en salsa ponzu, cebollín japonés, microgreens, escamas de sal marina y aceite de sésamo',
     'gallery.dish.5.name': 'Bacalao Negro al Miso',
     'gallery.dish.5.description': 'Bacalao de Alaska marinado 48 horas en miso blanco, mirin, sake, servido con brotes de soja y cebollín',
-    'gallery.dish.6.name': 'Ramen Tonkotsu Premium',
-    'gallery.dish.6.description': 'Caldo rico de hueso de cerdo cocido 24 horas, fideos frescos, chashu de cerdo, huevo marinado, cebollín y brotes de bambú',
-    'gallery.dish.7.name': 'Ramen Miso Especial',
-    'gallery.dish.7.description': 'Base cremosa de miso rojo y blanco, fideos artesanales, chashu tierno, huevo mollet, maíz dulce y algas nori',
-    'gallery.dish.8.name': 'Ramen Picante Especial',
-    'gallery.dish.8.description': 'Caldo picante con pasta de chile gochujang, carne molida sazonada, huevo perfectamente cocido, cebollín fresco y semillas de sésamo',
+    'gallery.dish.6.name': 'Sashimi Premium Artístico',
+    'gallery.dish.6.description': 'Selección artística de sashimi premium con atún rojo, salmón noruego y pez blanco, presentado con decoración tradicional japonesa y acompañamientos',
+    'gallery.dish.7.name': 'Bowl Kaisen Don',
+    'gallery.dish.7.description': 'Bowl de mariscos frescos con camarones tempura, sashimi variado, masago, tamago y vegetales sobre arroz sushi con salsa especial de la casa',
+    'gallery.dish.8.name': 'Yakisoba Premium',
+    'gallery.dish.8.description': 'Fideos yakisoba salteados con verduras frescas, carne de res tierna, brotes de soja, pimientos y salsa yakisoba artesanal con semillas de sésamo',
+    'gallery.dish.9.name': 'Tataki de Atún Premium',
+    'gallery.dish.9.description': 'Atún rojo de alta calidad sellado por fuera, crudo por dentro, con microgreens, brotes frescos y salsa ponzu con aceite de sésamo',
+    'gallery.dish.10.name': 'Salmón Glaseado Especial',
+    'gallery.dish.10.description': 'Salmón fresco glaseado con salsa teriyaki artesanal, verduras salteadas, brotes de daikon y presentación artística con reducción balsámica',
+    'gallery.dish.11.name': 'Ramen Shoyu Clásico',
+    'gallery.dish.11.description': 'Ramen tradicional con caldo claro de shoyu, fideos frescos, chashu de cerdo tierno, huevo ajitsuke, cebollín fresco y brotes de bambú',
 
-    // New 6 dishes
-    'gallery.dish.9.name': 'Sashimi Premium Artístico',
-    'gallery.dish.9.description': 'Selección artística de sashimi premium con atún rojo, salmón noruego y pez blanco, presentado con decoración tradicional japonesa y acompañamientos',
-    'gallery.dish.10.name': 'Bowl Kaisen Don',
-    'gallery.dish.10.description': 'Bowl de mariscos frescos con camarones tempura, sashimi variado, masago, tamago y vegetales sobre arroz sushi con salsa especial de la casa',
-    'gallery.dish.11.name': 'Yakisoba Premium',
-    'gallery.dish.11.description': 'Fideos yakisoba salteados con verduras frescas, carne de res tierna, brotes de soja, pimientos y salsa yakisoba artesanal con semillas de sésamo',
-    'gallery.dish.12.name': 'Tataki de Atún Premium',
-    'gallery.dish.12.description': 'Atún rojo de alta calidad sellado por fuera, crudo por dentro, con microgreens, brotes frescos y salsa ponzu con aceite de sésamo',
-    'gallery.dish.13.name': 'Salmón Glaseado Especial',
-    'gallery.dish.13.description': 'Salmón fresco glaseado con salsa teriyaki artesanal, verduras salteadas, brotes de daikon y presentación artística con reducción balsámica',
-    'gallery.dish.14.name': 'Ramen Shoyu Clásico',
-    'gallery.dish.14.description': 'Ramen tradicional con caldo claro de shoyu, fideos frescos, chashu de cerdo tierno, huevo ajitsuke, cebollín fresco y brotes de bambú',
-
-    // Menu content
+    // Menu content - Updated with new dishes from the image
     'menu.title': 'Nuestro',
     'menu.title.accent': 'Menú',
     'menu.subtitle': 'Platos cuidadosamente seleccionados que muestran los mejores ingredientes y técnicas tradicionales',
     'menu.cta.text': '¿Listo para experimentar la auténtica cocina japonesa?',
     'menu.cta.button': 'Hacer una Reservación',
+    
+    // Entrantes
+    'menu.category.0.title': 'Entrantes',
+    'menu.category.0.description': 'Para abrir el apetito',
+    'menu.category.0.item.0.name': 'Ensalada Especial',
+    'menu.category.0.item.0.price': '€4.50',
+    'menu.category.0.item.0.description': 'Ensalada de salmón, aguacate, frutos secos, salsa de sésamo',
+    'menu.category.0.item.1.name': 'Wakame',
+    'menu.category.0.item.1.price': '€3.60',
+    'menu.category.0.item.1.description': 'Algas wakame y sésamo',
+    'menu.category.0.item.2.name': 'Ensalada Pepino',
+    'menu.category.0.item.2.price': '€3.60',
+    'menu.category.0.item.2.description': 'Pepino, salsa de sésamo',
+    'menu.category.0.item.3.name': 'Kimchi',
+    'menu.category.0.item.3.price': '€3.00',
+    'menu.category.0.item.3.description': 'Ajo, col china con ajo, picante',
+    
+    // Platos Especiales
+    'menu.category.1.title': 'Platos Especiales',
+    'menu.category.1.description': 'Combinaciones creativas del chef',
+    'menu.category.1.item.0.name': 'Salmón Mango 2U',
+    'menu.category.1.item.0.price': '€5.95',
+    'menu.category.1.item.0.description': 'Salmón, mango, salsa mango',
+    'menu.category.1.item.1.name': 'Sashimi Mixto',
+    'menu.category.1.item.1.price': '€12.95',
+    'menu.category.1.item.1.description': 'Sashimi Mixto, cigala, gamba roja, salsa maracuyá',
+    'menu.category.1.item.2.name': 'Smoke Salmón 4U',
+    'menu.category.1.item.2.price': '€6.95',
+    'menu.category.1.item.2.description': 'Salmón flameado y ahumado, trufa tobiko, salsa ponzu',
+    'menu.category.1.item.3.name': 'Sushi Moriwase',
+    'menu.category.1.item.3.price': '€14.95',
+    'menu.category.1.item.3.description': 'Sashimi salmón x4, nigiri x5, ura x4, gonkan x2',
+    
+    // Arroz y Tallarines
+    'menu.category.2.title': 'Arroz y Tallarines',
+    'menu.category.2.description': 'Sabores auténticos japoneses',
+    'menu.category.2.item.0.name': 'Pollo Frito Don',
+    'menu.category.2.item.0.price': '€12.95',
+    'menu.category.2.item.0.description': 'Pollo frito, kimchi, arroz, sésamo',
+    'menu.category.2.item.1.name': 'Arroz frito con gambas',
+    'menu.category.2.item.1.price': '€5.95',
+    'menu.category.2.item.1.description': 'Arroz frito, huevo, guisantes, cebolla, zanahoria',
+    'menu.category.2.item.2.name': 'Yakisoba con Gamba',
+    'menu.category.2.item.2.price': '€5.95',
+    'menu.category.2.item.2.description': 'Huevo, gamba, verdura',
+    'menu.category.2.item.3.name': 'Pad Thai con Ternera',
+    'menu.category.2.item.3.price': '€5.95',
+    'menu.category.2.item.3.description': 'Tallarines de arroz con ternera, verduras, huevo',
     
     // About content
     'about.title': 'Nuestra',
