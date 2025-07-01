@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface EditableContextType {
@@ -92,9 +91,9 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'contact.info.1.detail.0': '941233212',
     'contact.info.1.detail.1': 'Llama para reservaciones',
     'contact.info.2.title': 'Horarios',
-    'contact.info.2.detail.0': 'Lun-Jue: 5:00 PM - 10:00 PM',
-    'contact.info.2.detail.1': 'Vie-Sáb: 5:00 PM - 11:00 PM',
-    'contact.info.2.detail.2': 'Dom: 4:00 PM - 9:00 PM',
+    'contact.info.2.detail.0': 'Todos los días:',
+    'contact.info.2.detail.1': '12:00 - 16:00',
+    'contact.info.2.detail.2': '19:30 - 00:00',
     'contact.info.3.title': 'Email',
     'contact.info.3.detail.0': 'info@sushi-ginza.com',
     'contact.info.3.detail.1': 'eventos@sushi-ginza.com',
