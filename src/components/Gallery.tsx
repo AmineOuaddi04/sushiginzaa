@@ -28,19 +28,19 @@ const Gallery = () => {
     {
       id: 4,
       name: 'Plato Omakase',
-      image: '/lovable-uploads/7ff5e928-f160-4e47-855f-115573be669d.png',
+      image: '/lovable-uploads/12f9318f-f571-4ad0-b3eb-36c944becdc4.png',
       description: 'Selección del chef de especialidades de temporada'
     },
     {
       id: 5,
       name: 'Tataki de Wagyu',
-      image: '/lovable-uploads/6c2d3ea0-56b4-441e-a307-1811c67f47de.png',
+      image: '/lovable-uploads/992d840e-9ac3-45f2-8259-c3a8a17a011b.png',
       description: 'Wagyu sellado con ponzu y microgreens'
     },
     {
       id: 6,
       name: 'Bacalao Negro al Miso',
-      image: '/lovable-uploads/ecb5149b-d6ab-46a7-8dc0-296a02663243.png',
+      image: '/lovable-uploads/b8b0a484-70ba-47d9-989e-0f296a8a065a.png',
       description: 'Bacalao marinado con glaseado dulce de miso'
     },
     {
