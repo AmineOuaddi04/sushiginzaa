@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 interface EditableContextType {
@@ -52,10 +51,10 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     // Gallery dish details - starting from dish.0
     'gallery.dish.0.name': 'Takoyaki 3U',
     'gallery.dish.0.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
-    'gallery.dish.1.name': 'Rollito de Primavera Mini 2U',
-    'gallery.dish.1.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
-    'gallery.dish.2.name': 'Pad Thai con Ternera',
-    'gallery.dish.2.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.1.name': 'Pad Thai con Ternera',
+    'gallery.dish.1.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.2.name': 'Rollito de Primavera Mini 2U',
+    'gallery.dish.2.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
     'gallery.dish.3.name': 'Arroz Negro con Pollo',
     'gallery.dish.3.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
     'gallery.dish.4.name': 'Sopa Miso',
@@ -169,8 +168,8 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'contact.info.2.detail.1': '12:00 - 16:00',
     'contact.info.2.detail.2': '19:30 - 00:00',
     'contact.info.3.title': 'Email',
-    'contact.info.3.detail.0': 'info@sushi-ginza.com',
-    'contact.info.3.detail.1': 'eventos@sushi-ginza.com',
+    'contact.info.3.detail.0': 'Sushiginzalogrono@gmail.com',
+    'contact.info.3.detail.1': 'Sushiginzalogrono@gmail.com',
     
     // Footer content
     'footer.brand.name': 'Sushi Ginza',
@@ -186,7 +185,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'footer.contact.address.line2': '26005 Logroño',
     'footer.contact.address.line3': 'La Rioja',
     'footer.contact.phone': '941233212',
-    'footer.contact.email': 'info@sushi-ginza.com',
+    'footer.contact.email': 'Sushiginzalogrono@gmail.com',
     'footer.copyright': '© 2024 Sushi Ginza. Todos los derechos reservados. | Elaborado con pasión por la auténtica cocina japonesa.',
   });
 
