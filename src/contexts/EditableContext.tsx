@@ -120,7 +120,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'menu.category.2.description': 'Sabores auténticos japoneses',
     'menu.category.2.item.0.name': 'Pollo Frito Don',
     'menu.category.2.item.0.price': '€12.95',
-    'menu.category.2.item.0.description': 'Pollo frito, kimchi, arroz, sésamo',
+    'menu.category.2.item.0.description': 'Pollo Frito, teriyaki, kimchi, sésamo, arroz',
     'menu.category.2.item.1.name': 'Arroz frito con gambas',
     'menu.category.2.item.1.price': '€5.95',
     'menu.category.2.item.1.description': 'Arroz frito, huevo, guisantes, cebolla, zanahoria',
