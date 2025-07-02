@@ -9,75 +9,75 @@ const Gallery = () => {
   const dishes = [
     {
       id: 1,
-      name: 'Selección Premium de Sashimi',
-      image: '/lovable-uploads/e1cdef30-bf46-4d1d-ac86-92e81807a7d5.png',
-      description: 'Cortes frescos de atún, salmón y pescado de temporada'
+      name: 'Salmón Rojo',
+      image: '/lovable-uploads/ef52a8b9-e6b1-4b79-8406-a66c62b4a045.png',
+      description: 'Salmón rojo fresco con presentación artística'
     },
     {
       id: 2,
-      name: 'Rollo Dragón',
-      image: '/lovable-uploads/4882d411-3284-4956-88e5-da3da97cd569.png',
-      description: 'Anguila y pepino cubiertos con aguacate'
+      name: 'Salmón Mango 2U',
+      image: '/lovable-uploads/bf3747ad-2b25-45c7-a080-364e1dafda26.png',
+      description: 'Salmón, mango, rúcula, salsa mango'
     },
     {
       id: 3,
-      name: 'Bowl Chirashi',
+      name: 'Pad Thai con Ternera',
       image: '/lovable-uploads/18cd7e5d-68ec-4b6e-a5cf-6e5c247cf772.png',
-      description: 'Sashimi variado sobre arroz de sushi sazonado'
+      description: 'Tallarines de Arroz con ternera, huevo y verdura'
     },
     {
       id: 4,
-      name: 'Plato Omakase',
+      name: 'Rollito de Primavera Mini',
       image: '/lovable-uploads/7ff5e928-f160-4e47-855f-115573be669d.png',
-      description: 'Selección del chef de especialidades de temporada'
+      description: 'Con brotes de soja, zanahoria, tofu seco, seta y col'
     },
     {
       id: 5,
-      name: 'Tataki de Wagyu',
+      name: 'Arroz Negro con Pollo',
       image: '/lovable-uploads/6c2d3ea0-56b4-441e-a307-1811c67f47de.png',
-      description: 'Wagyu sellado con ponzu y microgreens'
+      description: 'Huevos, zanahoria, guisantes, maíz, pollo'
     },
     {
       id: 6,
-      name: 'Bacalao Negro al Miso',
-      image: '/lovable-uploads/ecb5149b-d6ab-46a7-8dc0-296a02663243.png',
-      description: 'Bacalao marinado con glaseado dulce de miso'
+      name: 'Ramen de Chasu',
+      image: '/lovable-uploads/d99b4e71-5373-44d2-9cda-be5d72079a1e.png',
+      description: 'Con chasu, huevo marinado, brotes de soja, morillas, cebolleta'
+    },
+    {
+      id: 7,
+      name: 'Yakisoba con Picante',
+      image: '/lovable-uploads/2d3212f7-747d-42c8-9a60-7fcfb70fda59.png',
+      description: 'Huevo, verduras'
+    },
+    {
+      id: 8,
+      name: 'Pollo Frito Don',
+      image: '/lovable-uploads/2e4ccbfa-d857-41b7-9050-4ba731e55e81.png',
+      description: 'Pollo Frito, teriyaki, kimchi, sésamo, arroz'
+    },
+    {
+      id: 9,
+      name: 'Rollo Dragón',
+      image: '/lovable-uploads/4882d411-3284-4956-88e5-da3da97cd569.png',
+      description: 'Anguila glaseada, pepino japonés, aguacate maduro, cubierto con salsa kabayaki, semillas de sésamo tostado y hojuelas de nori'
     },
     {
       id: 10,
-      name: 'Sashimi Premium Artístico',
-      image: '/lovable-uploads/2e4ccbfa-d857-41b7-9050-4ba731e55e81.png',
-      description: 'Presentación artística de sashimi premium con decoración tradicional'
+      name: 'Bowl Chirashi',
+      image: '/lovable-uploads/26d06a1b-1a4d-4ed1-8aaa-32c86554e978.png',
+      description: 'Arroz de sushi sazonado con vinagre de arroz, selección diaria de sashimi fresco, tamagoyaki, pepino, rábano daikon y algas wakame'
     },
     {
       id: 11,
-      name: 'Bowl Kaisen Don',
-      image: '/lovable-uploads/26d06a1b-1a4d-4ed1-8aaa-32c86554e978.png',
-      description: 'Bowl de mariscos frescos sobre arroz con salsa especial'
+      name: 'Plato Omakase',
+      image: '/lovable-uploads/86a5fa91-8b69-41df-8538-74b58bbaa0fb.png',
+      description: 'Selección del chef con nigiri de temporada, sashimi premium, rollo especial de la casa y acompañamientos tradicionales japoneses'
     },
     {
       id: 12,
-      name: 'Yakisoba Premium',
-      image: '/lovable-uploads/86a5fa91-8b69-41df-8538-74b58bbaa0fb.png',
-      description: 'Fideos salteados con verduras y carne en salsa especial'
-    },
-    {
-      id: 13,
-      name: 'Tataki de Atún Premium',
+      name: 'Tataki de Wagyu',
       image: '/lovable-uploads/25437ee9-0f42-4541-8c56-846c9f432617.png',
-      description: 'Atún rojo sellado con microgreens y salsa ponzu'
-    },
-    {
-      id: 14,
-      name: 'Salmón Glaseado Especial',
-      image: '/lovable-uploads/e5f96cb9-3691-4906-870e-8fe92724aef4.png',
-      description: 'Salmón con glaseado especial y presentación artística'
-    },
-    {
-      id: 15,
-      name: 'Ramen Shoyu Clásico',
-      image: '/lovable-uploads/f246d935-94bb-4323-a028-769b2feb1d48.png',
-      description: 'Ramen tradicional con caldo de shoyu, chashu y huevo ajitsuke'
+      description: 'Wagyu A5 sellado ligeramente, marinado en salsa ponzu, cebollín japonés, microgreens, escamas de sal marina y aceite de sésamo'
     }
   ];
 

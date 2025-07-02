@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface EditableContextType {
@@ -49,21 +48,21 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.subtitle': 'Cada plato es una obra maestra, elaborada con precisión y pasión',
     'gallery.cta': 'Ver Galería Completa',
     
-    // Gallery dish details - Corregido empezando desde dish.1
-    'gallery.dish.0.name': 'Selección Premium de Sashimi',
-    'gallery.dish.0.description': 'Atún rojo, salmón noruego, pez limón japonés, erizo de mar de Hokkaido, servido con wasabi fresco, jengibre encurtido y salsa de soja artesanal',
-    'gallery.dish.1.name': 'Takoyaki',
-    'gallery.dish.1.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
+    // Gallery dish details - Empezando desde dish.0
+    'gallery.dish.0.name': 'Salmón Rojo',
+    'gallery.dish.0.description': 'Salmón rojo fresco con presentación artística',
+    'gallery.dish.1.name': 'Salmón Mango 2U',
+    'gallery.dish.1.description': 'Salmón, mango, rúcula, salsa mango',
     'gallery.dish.2.name': 'Pad Thai con Ternera',
     'gallery.dish.2.description': 'Tallarines de Arroz con ternera, huevo y verdura',
     'gallery.dish.3.name': 'Rollito de Primavera Mini',
     'gallery.dish.3.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
     'gallery.dish.4.name': 'Arroz Negro con Pollo',
     'gallery.dish.4.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
-    'gallery.dish.5.name': 'Sopa Miso',
-    'gallery.dish.5.description': 'Tofu y algas',
+    'gallery.dish.5.name': 'Ramen de Chasu',
+    'gallery.dish.5.description': 'Con chasu, huevo marinado, brotes de soja, morillas, cebolleta',
     'gallery.dish.6.name': 'Yakisoba con Picante',
-    'gallery.dish.6.description': 'Huevo, Verdura',
+    'gallery.dish.6.description': 'Huevo, verduras',
     'gallery.dish.7.name': 'Pollo Frito Don',
     'gallery.dish.7.description': 'Pollo Frito, teriyaki, kimchi, sésamo, arroz',
     'gallery.dish.8.name': 'Rollo Dragón',
@@ -74,8 +73,6 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.10.description': 'Selección del chef con nigiri de temporada, sashimi premium, rollo especial de la casa y acompañamientos tradicionales japoneses',
     'gallery.dish.11.name': 'Tataki de Wagyu',
     'gallery.dish.11.description': 'Wagyu A5 sellado ligeramente, marinado en salsa ponzu, cebollín japonés, microgreens, escamas de sal marina y aceite de sésamo',
-    'gallery.dish.12.name': 'Sushi Moriwase',
-    'gallery.dish.12.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
 
     // Menu content - Updated with new dishes from the image
     'menu.title': 'Nuestro',
@@ -212,6 +209,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
       
     } catch (error) {
       console.error('Error saving to backend:', error);
+      throw error;
     }
   };
 
