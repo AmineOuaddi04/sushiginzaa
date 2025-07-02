@@ -48,7 +48,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.subtitle': 'Cada plato es una obra maestra, elaborada con precisión y pasión',
     'gallery.cta': 'Ver Galería Completa',
     
-    // Gallery dish details - Empezando desde dish.0
+    // Gallery dish details - Starting from dish.0
     'gallery.dish.0.name': 'Salmón Rojo',
     'gallery.dish.0.description': 'Salmón rojo fresco con presentación artística',
     'gallery.dish.1.name': 'Salmón Mango 2U',
