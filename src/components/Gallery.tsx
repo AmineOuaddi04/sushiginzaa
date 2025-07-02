@@ -57,9 +57,9 @@ const Gallery = () => {
     },
     {
       id: 12,
-      name: 'Yakisoba Premium',
-      image: '/lovable-uploads/86a5fa91-8b69-41df-8538-74b58bbaa0fb.png',
-      description: 'Fideos salteados con verduras y carne en salsa especial'
+      name: 'Fideos Con Ternera',
+      image: '/lovable-uploads/bedd25a3-9cb8-41a0-84b6-ea8294767a8c.png',
+      description: 'Fideos salteados con ternera y verduras'
     },
     {
       id: 13,

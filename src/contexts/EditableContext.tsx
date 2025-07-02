@@ -65,6 +65,14 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.6.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
     'gallery.dish.7.name': 'Pollo Frito Don',
     'gallery.dish.7.description': 'Pollo frito, kimchi, sésamo, teriyaki, arroz',
+    'gallery.dish.8.name': 'Fideos Con Ternera',
+    'gallery.dish.8.description': 'Fideos con ternera, huevo y verdura',
+    'gallery.dish.9.name': 'Salmón Roja',
+    'gallery.dish.9.description': '',
+    'gallery.dish.10.name': 'Salmon Mango 2U',
+    'gallery.dish.10.description': 'Salmón, rúcula, salsa mango, mango',
+    'gallery.dish.11.name': 'Ramen De Chasu',
+    'gallery.dish.11.description': 'Con Chasu, huevo marinado, brotes de soja, morillas, cebolletas',
     
     // Menu content - Updated with new dishes from the image
     'menu.title': 'Nuestro',
