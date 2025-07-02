@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 interface EditableContextType {
@@ -52,10 +51,10 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     // Gallery dish details - starting from dish.0
     'gallery.dish.0.name': 'Takoyaki 3U',
     'gallery.dish.0.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
-    'gallery.dish.1.name': 'Pad Thai con Ternera',
-    'gallery.dish.1.description': 'Tallarines de Arroz con ternera, huevo y verdura',
-    'gallery.dish.2.name': 'Rollito de Primavera Mini 2U',
-    'gallery.dish.2.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
+    'gallery.dish.1.name': 'Rollito de Primavera Mini 2U',
+    'gallery.dish.1.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
+    'gallery.dish.2.name': 'Pad Thai con Ternera',
+    'gallery.dish.2.description': 'Tallarines de Arroz con ternera, huevo y verdura',
     'gallery.dish.3.name': 'Arroz Negro con Pollo',
     'gallery.dish.3.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
     'gallery.dish.4.name': 'Sopa Miso',
@@ -66,15 +65,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.6.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
     'gallery.dish.7.name': 'Pollo Frito Don',
     'gallery.dish.7.description': 'Pollo frito, kimchi, sésamo, teriyaki, arroz',
-    'gallery.dish.8.name': 'Yakisoba Premium',
-    'gallery.dish.8.description': 'Fideos salteados con verduras y carne en salsa especial',
-    'gallery.dish.9.name': 'Tataki de Atún Premium',
-    'gallery.dish.9.description': 'Atún rojo sellado con microgreens y salsa ponzu',
-    'gallery.dish.10.name': 'Salmón Glaseado Especial',
-    'gallery.dish.10.description': 'Salmón con glaseado especial y presentación artística',
-    'gallery.dish.11.name': 'Ramen Shoyu Clásico',
-    'gallery.dish.11.description': 'Ramen tradicional con caldo de shoyu, chashu y huevo ajitsuke',
-
+    
     // Menu content - Updated with new dishes from the image
     'menu.title': 'Nuestro',
     'menu.title.accent': 'Menú',
