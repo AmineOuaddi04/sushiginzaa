@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 interface EditableContextType {
   isEditMode: boolean;
@@ -49,22 +50,22 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.cta': 'Ver Galería Completa',
     
     // Gallery dish details - starting from dish.0
-    'gallery.dish.0.name': 'Selección Premium de Sashimi',
-    'gallery.dish.0.description': 'Cortes frescos de atún, salmón y pescado de temporada',
-    'gallery.dish.1.name': 'Rollo Dragón',
-    'gallery.dish.1.description': 'Anguila y pepino cubiertos con aguacate',
-    'gallery.dish.2.name': 'Bowl Chirashi',
-    'gallery.dish.2.description': 'Sashimi variado sobre arroz de sushi sazonado',
-    'gallery.dish.3.name': 'Plato Omakase',
-    'gallery.dish.3.description': 'Selección del chef de especialidades de temporada',
-    'gallery.dish.4.name': 'Tataki de Wagyu',
-    'gallery.dish.4.description': 'Wagyu sellado con ponzu y microgreens',
-    'gallery.dish.5.name': 'Bacalao Negro al Miso',
-    'gallery.dish.5.description': 'Bacalao marinado con glaseado dulce de miso',
-    'gallery.dish.6.name': 'Sashimi Premium Artístico',
-    'gallery.dish.6.description': 'Presentación artística de sashimi premium con decoración tradicional',
-    'gallery.dish.7.name': 'Bowl Kaisen Don',
-    'gallery.dish.7.description': 'Bowl de mariscos frescos sobre arroz con salsa especial',
+    'gallery.dish.0.name': 'Takoyaki 3U',
+    'gallery.dish.0.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
+    'gallery.dish.1.name': 'Pad Thai con Ternera',
+    'gallery.dish.1.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.2.name': 'Rollito de Primavera Mini 2U',
+    'gallery.dish.2.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
+    'gallery.dish.3.name': 'Arroz Negro con Pollo',
+    'gallery.dish.3.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
+    'gallery.dish.4.name': 'Sopa Miso',
+    'gallery.dish.4.description': 'Tofu y algas',
+    'gallery.dish.5.name': 'Yakisoba con Picante',
+    'gallery.dish.5.description': 'Huevo, Verdura',
+    'gallery.dish.6.name': 'Sushi Moriwase',
+    'gallery.dish.6.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
+    'gallery.dish.7.name': 'Pollo Frito Don',
+    'gallery.dish.7.description': 'Pollo frito, kimchi, sésamo, teriyaki, arroz',
     'gallery.dish.8.name': 'Yakisoba Premium',
     'gallery.dish.8.description': 'Fideos salteados con verduras y carne en salsa especial',
     'gallery.dish.9.name': 'Tataki de Atún Premium',
@@ -190,11 +191,35 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'footer.copyright': '© 2024 Sushi Ginza. Todos los derechos reservados. | Elaborado con pasión por la auténtica cocina japonesa.',
   });
 
+  // Load saved content from localStorage on component mount
+  useEffect(() => {
+    const savedContent = localStorage.getItem('editableContent');
+    if (savedContent) {
+      try {
+        const parsedContent = JSON.parse(savedContent);
+        setContent(prev => ({ ...prev, ...parsedContent }));
+      } catch (error) {
+        console.error('Error loading saved content:', error);
+      }
+    }
+  }, []);
+
   const updateContent = (key: string, value: string) => {
-    setContent(prev => ({
-      ...prev,
-      [key]: value
-    }));
+    setContent(prev => {
+      const newContent = {
+        ...prev,
+        [key]: value
+      };
+      
+      // Save to localStorage
+      try {
+        localStorage.setItem('editableContent', JSON.stringify(newContent));
+      } catch (error) {
+        console.error('Error saving content:', error);
+      }
+      
+      return newContent;
+    });
   };
 
   return (
