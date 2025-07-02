@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface EditableContextType {
@@ -49,7 +48,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.subtitle': 'Cada plato es una obra maestra, elaborada con precisión y pasión',
     'gallery.cta': 'Ver Galería Completa',
     
-    // Gallery dish details with ingredients (removed dishes 6, 7, 8 and renumbered)
+    // Updated Gallery dish details
     'gallery.dish.0.name': 'Selección Premium de Sashimi',
     'gallery.dish.0.description': 'Atún rojo, salmón noruego, pez limón japonés, erizo de mar de Hokkaido, servido con wasabi fresco, jengibre encurtido y salsa de soja artesanal',
     'gallery.dish.1.name': 'Rollo Dragón',
@@ -62,18 +61,20 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.4.description': 'Wagyu A5 sellado ligeramente, marinado en salsa ponzu, cebollín japonés, microgreens, escamas de sal marina y aceite de sésamo',
     'gallery.dish.5.name': 'Bacalao Negro al Miso',
     'gallery.dish.5.description': 'Bacalao de Alaska marinado 48 horas en miso blanco, mirin, sake, servido con brotes de soja y cebollín',
-    'gallery.dish.6.name': 'Sashimi Premium Artístico',
-    'gallery.dish.6.description': 'Selección artística de sashimi premium con atún rojo, salmón noruego y pez blanco, presentado con decoración tradicional japonesa y acompañamientos',
-    'gallery.dish.7.name': 'Bowl Kaisen Don',
-    'gallery.dish.7.description': 'Bowl de mariscos frescos con camarones tempura, sashimi variado, masago, tamago y vegetales sobre arroz sushi con salsa especial de la casa',
-    'gallery.dish.8.name': 'Yakisoba Premium',
-    'gallery.dish.8.description': 'Fideos yakisoba salteados con verduras frescas, carne de res tierna, brotes de soja, pimientos y salsa yakisoba artesanal con semillas de sésamo',
-    'gallery.dish.9.name': 'Tataki de Atún Premium',
-    'gallery.dish.9.description': 'Atún rojo de alta calidad sellado por fuera, crudo por dentro, con microgreens, brotes frescos y salsa ponzu con aceite de sésamo',
-    'gallery.dish.10.name': 'Salmón Glaseado Especial',
-    'gallery.dish.10.description': 'Salmón fresco glaseado con salsa teriyaki artesanal, verduras salteadas, brotes de daikon y presentación artística con reducción balsámica',
-    'gallery.dish.11.name': 'Ramen Shoyu Clásico',
-    'gallery.dish.11.description': 'Ramen tradicional con caldo claro de shoyu, fideos frescos, chashu de cerdo tierno, huevo ajitsuke, cebollín fresco y brotes de bambú',
+    'gallery.dish.6.name': 'Takoyaki',
+    'gallery.dish.6.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
+    'gallery.dish.7.name': 'Pad Thai con Ternera',
+    'gallery.dish.7.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.8.name': 'Rollito de Primavera Mini',
+    'gallery.dish.8.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
+    'gallery.dish.9.name': 'Arroz Negro con Pollo',
+    'gallery.dish.9.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
+    'gallery.dish.10.name': 'Sopa Miso',
+    'gallery.dish.10.description': 'Tofu y algas',
+    'gallery.dish.11.name': 'Yakisoba con Picante',
+    'gallery.dish.11.description': 'Huevo, Verdura',
+    'gallery.dish.12.name': 'Sushi Moriwase',
+    'gallery.dish.12.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
 
     // Menu content - Updated with new dishes from the image
     'menu.title': 'Nuestro',
