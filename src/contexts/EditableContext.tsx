@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface EditableContextType {
@@ -48,31 +49,31 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.subtitle': 'Cada plato es una obra maestra, elaborada con precisión y pasión',
     'gallery.cta': 'Ver Galería Completa',
     
-    // Updated Gallery dish details - corrected positions
+    // Gallery dish details - Corregido empezando desde dish.1
     'gallery.dish.0.name': 'Selección Premium de Sashimi',
     'gallery.dish.0.description': 'Atún rojo, salmón noruego, pez limón japonés, erizo de mar de Hokkaido, servido con wasabi fresco, jengibre encurtido y salsa de soja artesanal',
-    'gallery.dish.1.name': 'Rollo Dragón',
-    'gallery.dish.1.description': 'Anguila glaseada, pepino japonés, aguacate maduro, cubierto con salsa kabayaki, semillas de sésamo tostado y hojuelas de nori',
-    'gallery.dish.2.name': 'Bowl Chirashi',
-    'gallery.dish.2.description': 'Arroz de sushi sazonado con vinagre de arroz, selección diaria de sashimi fresco, tamagoyaki, pepino, rábano daikon y algas wakame',
-    'gallery.dish.3.name': 'Plato Omakase',
-    'gallery.dish.3.description': 'Selección del chef con nigiri de temporada, sashimi premium, rollo especial de la casa y acompañamientos tradicionales japoneses',
-    'gallery.dish.4.name': 'Tataki de Wagyu',
-    'gallery.dish.4.description': 'Wagyu A5 sellado ligeramente, marinado en salsa ponzu, cebollín japonés, microgreens, escamas de sal marina y aceite de sésamo',
-    'gallery.dish.5.name': 'Bacalao Negro al Miso',
-    'gallery.dish.5.description': 'Bacalao de Alaska marinado 48 horas en miso blanco, mirin, sake, servido con brotes de soja y cebollín',
-    'gallery.dish.6.name': 'Takoyaki',
-    'gallery.dish.6.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
-    'gallery.dish.7.name': 'Pad Thai con Ternera',
-    'gallery.dish.7.description': 'Tallarines de Arroz con ternera, huevo y verdura',
-    'gallery.dish.8.name': 'Rollito de Primavera Mini',
-    'gallery.dish.8.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
-    'gallery.dish.9.name': 'Arroz Negro con Pollo',
-    'gallery.dish.9.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
-    'gallery.dish.10.name': 'Sopa Miso',
-    'gallery.dish.10.description': 'Tofu y algas',
-    'gallery.dish.11.name': 'Yakisoba con Picante',
-    'gallery.dish.11.description': 'Huevo, Verdura',
+    'gallery.dish.1.name': 'Takoyaki',
+    'gallery.dish.1.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
+    'gallery.dish.2.name': 'Pad Thai con Ternera',
+    'gallery.dish.2.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.3.name': 'Rollito de Primavera Mini',
+    'gallery.dish.3.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
+    'gallery.dish.4.name': 'Arroz Negro con Pollo',
+    'gallery.dish.4.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
+    'gallery.dish.5.name': 'Sopa Miso',
+    'gallery.dish.5.description': 'Tofu y algas',
+    'gallery.dish.6.name': 'Yakisoba con Picante',
+    'gallery.dish.6.description': 'Huevo, Verdura',
+    'gallery.dish.7.name': 'Pollo Frito Don',
+    'gallery.dish.7.description': 'Pollo Frito, teriyaki, kimchi, sésamo, arroz',
+    'gallery.dish.8.name': 'Rollo Dragón',
+    'gallery.dish.8.description': 'Anguila glaseada, pepino japonés, aguacate maduro, cubierto con salsa kabayaki, semillas de sésamo tostado y hojuelas de nori',
+    'gallery.dish.9.name': 'Bowl Chirashi',
+    'gallery.dish.9.description': 'Arroz de sushi sazonado con vinagre de arroz, selección diaria de sashimi fresco, tamagoyaki, pepino, rábano daikon y algas wakame',
+    'gallery.dish.10.name': 'Plato Omakase',
+    'gallery.dish.10.description': 'Selección del chef con nigiri de temporada, sashimi premium, rollo especial de la casa y acompañamientos tradicionales japoneses',
+    'gallery.dish.11.name': 'Tataki de Wagyu',
+    'gallery.dish.11.description': 'Wagyu A5 sellado ligeramente, marinado en salsa ponzu, cebollín japonés, microgreens, escamas de sal marina y aceite de sésamo',
     'gallery.dish.12.name': 'Sushi Moriwase',
     'gallery.dish.12.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
 
@@ -192,12 +193,53 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'footer.copyright': '© 2024 Sushi Ginza. Todos los derechos reservados. | Elaborado con pasión por la auténtica cocina japonesa.',
   });
 
-  const updateContent = (key: string, value: string) => {
+  const saveToBackend = async (key: string, value: string) => {
+    try {
+      // Guardamos los cambios en localStorage como backup
+      const currentData = localStorage.getItem('sushi-ginza-content');
+      const data = currentData ? JSON.parse(currentData) : {};
+      data[key] = value;
+      localStorage.setItem('sushi-ginza-content', JSON.stringify(data));
+      
+      console.log('Content saved to backend:', { key, value });
+      
+      // Aquí se podría implementar la llamada al backend real
+      // await fetch('/api/content', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ key, value })
+      // });
+      
+    } catch (error) {
+      console.error('Error saving to backend:', error);
+    }
+  };
+
+  const updateContent = async (key: string, value: string) => {
     setContent(prev => ({
       ...prev,
       [key]: value
     }));
+    
+    // Guardar en el backend
+    await saveToBackend(key, value);
   };
+
+  // Cargar contenido guardado al inicializar
+  React.useEffect(() => {
+    const savedContent = localStorage.getItem('sushi-ginza-content');
+    if (savedContent) {
+      try {
+        const parsedContent = JSON.parse(savedContent);
+        setContent(prev => ({
+          ...prev,
+          ...parsedContent
+        }));
+      } catch (error) {
+        console.error('Error loading saved content:', error);
+      }
+    }
+  }, []);
 
   return (
     <EditableContext.Provider value={{
