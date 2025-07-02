@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 interface EditableContextType {
@@ -52,10 +51,10 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     // Gallery dish details - starting from dish.0
     'gallery.dish.0.name': 'Takoyaki 3U',
     'gallery.dish.0.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
-    'gallery.dish.1.name': 'Rollito de Primavera Mini 2U',
-    'gallery.dish.1.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
-    'gallery.dish.2.name': 'Pad Thai con Ternera',
-    'gallery.dish.2.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.1.name': 'Pad Thai con Ternera',
+    'gallery.dish.1.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.2.name': 'Rollito de Primavera Mini 2U',
+    'gallery.dish.2.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
     'gallery.dish.3.name': 'Arroz Negro con Pollo',
     'gallery.dish.3.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
     'gallery.dish.4.name': 'Sopa Miso',
