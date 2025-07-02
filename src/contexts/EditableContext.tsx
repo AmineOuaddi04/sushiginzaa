@@ -48,7 +48,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.subtitle': 'Cada plato es una obra maestra, elaborada con precisión y pasión',
     'gallery.cta': 'Ver Galería Completa',
     
-    // Updated Gallery dish details
+    // Updated Gallery dish details - corrected positions
     'gallery.dish.0.name': 'Selección Premium de Sashimi',
     'gallery.dish.0.description': 'Atún rojo, salmón noruego, pez limón japonés, erizo de mar de Hokkaido, servido con wasabi fresco, jengibre encurtido y salsa de soja artesanal',
     'gallery.dish.1.name': 'Rollo Dragón',
