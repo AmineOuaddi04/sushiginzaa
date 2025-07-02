@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 interface EditableContextType {
@@ -68,7 +69,6 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.8.name': 'Fideos Con Ternera',
     'gallery.dish.8.description': 'Fideos con ternera, huevo y verdura',
     'gallery.dish.9.name': 'Salmón Roja',
-    'gallery.dish.9.description': '',
     'gallery.dish.10.name': 'Salmon Mango 2U',
     'gallery.dish.10.description': 'Salmón, rúcula, salsa mango, mango',
     'gallery.dish.11.name': 'Ramen De Chasu',
