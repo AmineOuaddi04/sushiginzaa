@@ -62,17 +62,15 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.4.description': 'Tofu y algas',
     'gallery.dish.5.name': 'Yakisoba con Picante',
     'gallery.dish.5.description': 'Huevo, Verdura',
-    'gallery.dish.6.name': 'Sushi Moriwase',
-    'gallery.dish.6.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
-    'gallery.dish.7.name': 'Pollo Frito Don',
-    'gallery.dish.7.description': 'Pollo frito, kimchi, sésamo, teriyaki, arroz',
+    'gallery.dish.6.name': 'Uramaki Mango',
+    'gallery.dish.7.name': 'Milhojas',
     'gallery.dish.8.name': 'Fideos Con Ternera',
     'gallery.dish.8.description': 'Fideos con ternera, huevo y verdura',
-    'gallery.dish.9.name': 'Salmón Roja',
-    'gallery.dish.10.name': 'Salmon Mango 2U',
-    'gallery.dish.10.description': 'Salmón, rúcula, salsa mango, mango',
-    'gallery.dish.11.name': 'Ramen De Chasu',
-    'gallery.dish.11.description': 'Con Chasu, huevo marinado, brotes de soja, morillas, cebolletas',
+    'gallery.dish.9.name': 'Tataki de Atún Premium',
+    'gallery.dish.9.description': 'Atún rojo sellado con microgreens y salsa ponzu',
+    'gallery.dish.10.name': 'Salmón Glaseado Especial',
+    'gallery.dish.10.description': 'Salmón con glaseado especial y presentación artística',
+    'gallery.dish.11.name': 'Uramaki Mango',
     
     // Menu content - Updated with new dishes from the image
     'menu.title': 'Nuestro',
@@ -169,8 +167,8 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'contact.info.2.detail.1': '12:00 - 16:00',
     'contact.info.2.detail.2': '19:30 - 00:00',
     'contact.info.3.title': 'Email',
-    'contact.info.3.detail.0': 'info@sushi-ginza.com',
-    'contact.info.3.detail.1': 'eventos@sushi-ginza.com',
+    'contact.info.3.detail.0': 'Sushiginzalogrono@gmail.com',
+    'contact.info.3.detail.1': 'Sushiginzalogrono@gmail.com',
     
     // Footer content
     'footer.brand.name': 'Sushi Ginza',
@@ -186,8 +184,14 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'footer.contact.address.line2': '26005 Logroño',
     'footer.contact.address.line3': 'La Rioja',
     'footer.contact.phone': '941233212',
-    'footer.contact.email': 'info@sushi-ginza.com',
+    'footer.contact.email': 'Sushiginzalogrono@gmail.com',
     'footer.copyright': '© 2024 Sushi Ginza. Todos los derechos reservados. | Elaborado con pasión por la auténtica cocina japonesa.',
+    
+    // Parking popup
+    'parking.popup.title': '🅿️ ¡Parking Gratuito!',
+    'parking.popup.description': 'Disfruta de 1 hora de parking gratuito en el Parking Gran Vía de Logroño al comer en nuestro restaurante.',
+    'parking.popup.cta': '¡Reservar Mesa!',
+    'parking.popup.close': 'Cerrar',
   });
 
   // Load saved content from localStorage on component mount
