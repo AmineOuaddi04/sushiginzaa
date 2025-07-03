@@ -51,15 +51,15 @@ const Gallery = () => {
     },
     {
       id: 11,
-      name: 'Bowl Kaisen Don',
+      name: 'Uramaki Mango',
       image: '/lovable-uploads/ef76f428-1bbd-420f-8a7f-44fb4d53cb87.png',
-      description: 'Bowl de mariscos frescos sobre arroz con salsa especial'
+      description: ''
     },
     {
       id: 12,
-      name: 'Fideos Con Ternera',
+      name: 'Milhojas',
       image: '/lovable-uploads/a27c6bff-abe3-40a5-bb08-e4831ee654ff.png',
-      description: 'Fideos salteados con ternera y verduras'
+      description: ''
     },
     {
       id: 13,
@@ -75,9 +75,9 @@ const Gallery = () => {
     },
     {
       id: 15,
-      name: 'Ramen Shoyu Clásico',
+      name: 'Uramaki Mango',
       image: '/lovable-uploads/51e79f99-bafd-489f-b294-bcd970c4e368.png',
-      description: 'Ramen tradicional con caldo de shoyu, chashu y huevo ajitsuke'
+      description: ''
     }
   ];
 
@@ -124,13 +124,15 @@ const Gallery = () => {
                     >
                       {dish.name}
                     </EditableText>
-                    <EditableText
-                      contentKey={`gallery.dish.${index}.description`}
-                      className="text-white/80 text-sm"
-                      as="p"
-                    >
-                      {dish.description}
-                    </EditableText>
+                    {dish.description && (
+                      <EditableText
+                        contentKey={`gallery.dish.${index}.description`}
+                        className="text-white/80 text-sm"
+                        as="p"
+                      >
+                        {dish.description}
+                      </EditableText>
+                    )}
                   </div>
                 </div>
               </CardContent>
