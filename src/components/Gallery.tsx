@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import EditableText from '@/components/EditableText';
@@ -75,7 +74,7 @@ const Gallery = () => {
     },
     {
       id: 15,
-      name: 'Uramaki Mango',
+      name: 'Sashimi Salmón',
       image: '/lovable-uploads/51e79f99-bafd-489f-b294-bcd970c4e368.png',
       description: ''
     }
