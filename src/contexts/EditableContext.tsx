@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 interface EditableContextType {
@@ -52,25 +51,27 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     // Gallery dish details - starting from dish.0
     'gallery.dish.0.name': 'Takoyaki 3U',
     'gallery.dish.0.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
-    'gallery.dish.1.name': 'Rollito de Primavera Mini 2U',
-    'gallery.dish.1.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
-    'gallery.dish.2.name': 'Pad Thai con Ternera',
-    'gallery.dish.2.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.1.name': 'Pad Thai con Ternera',
+    'gallery.dish.1.description': 'Tallarines de Arroz con ternera, huevo y verdura',
+    'gallery.dish.2.name': 'Rollito de Primavera Mini 2U',
+    'gallery.dish.2.description': 'Con brotes de soja, zanahoria, tofu seco, seta y col',
     'gallery.dish.3.name': 'Arroz Negro con Pollo',
     'gallery.dish.3.description': 'Huevos, zanahoria, guisantes, maíz, pollo',
     'gallery.dish.4.name': 'Sopa Miso',
     'gallery.dish.4.description': 'Tofu y algas',
     'gallery.dish.5.name': 'Yakisoba con Picante',
     'gallery.dish.5.description': 'Huevo, Verdura',
-    'gallery.dish.6.name': 'Uramaki Mango',
-    'gallery.dish.7.name': 'Milhojas',
+    'gallery.dish.6.name': 'Sushi Moriwase',
+    'gallery.dish.6.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
+    'gallery.dish.7.name': 'Pollo Frito Don',
+    'gallery.dish.7.description': 'Pollo frito, kimchi, sésamo, teriyaki, arroz',
     'gallery.dish.8.name': 'Fideos Con Ternera',
     'gallery.dish.8.description': 'Fideos con ternera, huevo y verdura',
-    'gallery.dish.9.name': 'Tataki de Atún Premium',
-    'gallery.dish.9.description': 'Atún rojo sellado con microgreens y salsa ponzu',
-    'gallery.dish.10.name': 'Salmón Glaseado Especial',
-    'gallery.dish.10.description': 'Salmón con glaseado especial y presentación artística',
-    'gallery.dish.11.name': 'Uramaki Mango',
+    'gallery.dish.9.name': 'Salmón Roja',
+    'gallery.dish.10.name': 'Salmon Mango 2U',
+    'gallery.dish.10.description': 'Salmón, rúcula, salsa mango, mango',
+    'gallery.dish.11.name': 'Ramen De Chasu',
+    'gallery.dish.11.description': 'Con Chasu, huevo marinado, brotes de soja, morillas, cebolletas',
     
     // Menu content - Updated with new dishes from the image
     'menu.title': 'Nuestro',
@@ -186,12 +187,6 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'footer.contact.phone': '941233212',
     'footer.contact.email': 'Sushiginzalogrono@gmail.com',
     'footer.copyright': '© 2024 Sushi Ginza. Todos los derechos reservados. | Elaborado con pasión por la auténtica cocina japonesa.',
-    
-    // Parking popup
-    'parking.popup.title': '🅿️ ¡Parking Gratuito!',
-    'parking.popup.description': 'Disfruta de 1 hora de parking gratuito en el Parking Gran Vía de Logroño al comer en nuestro restaurante.',
-    'parking.popup.cta': '¡Reservar Mesa!',
-    'parking.popup.close': 'Cerrar',
   });
 
   // Load saved content from localStorage on component mount
