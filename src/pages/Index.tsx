@@ -6,7 +6,6 @@ import MenuSection from '@/components/MenuSection';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import ParkingPopup from '@/components/ParkingPopup';
 import { EditableProvider } from '@/contexts/EditableContext';
 
 const Index = () => {
@@ -22,7 +21,6 @@ const Index = () => {
           <Contact />
         </main>
         <Footer />
-        <ParkingPopup />
       </div>
     </EditableProvider>
   );

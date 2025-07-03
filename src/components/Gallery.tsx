@@ -44,40 +44,40 @@ const Gallery = () => {
       description: 'Bacalao marinado con glaseado dulce de miso'
     },
     {
-      id: 7,
-      name: 'Uramaki Mango',
-      image: '/lovable-uploads/12f9318f-f571-4ad0-b3eb-36c944becdc4.png',
-      description: ''
+      id: 10,
+      name: 'Sashimi Premium Artístico',
+      image: '/lovable-uploads/2e4ccbfa-d857-41b7-9050-4ba731e55e81.png',
+      description: 'Presentación artística de sashimi premium con decoración tradicional'
     },
     {
-      id: 8,
-      name: 'Milhojas',
-      image: '/lovable-uploads/992d840e-9ac3-45f2-8259-c3a8a17a011b.png',
-      description: ''
+      id: 11,
+      name: 'Bowl Kaisen Don',
+      image: '/lovable-uploads/26d06a1b-1a4d-4ed1-8aaa-32c86554e978.png',
+      description: 'Bowl de mariscos frescos sobre arroz con salsa especial'
     },
     {
-      id: 9,
-      name: 'Salmón Roja',
+      id: 12,
+      name: 'Fideos Con Ternera',
       image: '/lovable-uploads/bedd25a3-9cb8-41a0-84b6-ea8294767a8c.png',
       description: 'Fideos salteados con ternera y verduras'
     },
     {
-      id: 10,
+      id: 13,
       name: 'Tataki de Atún Premium',
       image: '/lovable-uploads/25437ee9-0f42-4541-8c56-846c9f432617.png',
       description: 'Atún rojo sellado con microgreens y salsa ponzu'
     },
     {
-      id: 11,
+      id: 14,
       name: 'Salmón Glaseado Especial',
       image: '/lovable-uploads/e5f96cb9-3691-4906-870e-8fe92724aef4.png',
       description: 'Salmón con glaseado especial y presentación artística'
     },
     {
-      id: 12,
-      name: 'Uramaki Mango',
-      image: '/lovable-uploads/b8b0a484-70ba-47d9-989e-0f296a8a065a.png',
-      description: ''
+      id: 15,
+      name: 'Ramen Shoyu Clásico',
+      image: '/lovable-uploads/f246d935-94bb-4323-a028-769b2feb1d48.png',
+      description: 'Ramen tradicional con caldo de shoyu, chashu y huevo ajitsuke'
     }
   ];
 
@@ -124,15 +124,13 @@ const Gallery = () => {
                     >
                       {dish.name}
                     </EditableText>
-                    {dish.description && (
-                      <EditableText
-                        contentKey={`gallery.dish.${index}.description`}
-                        className="text-white/80 text-sm"
-                        as="p"
-                      >
-                        {dish.description}
-                      </EditableText>
-                    )}
+                    <EditableText
+                      contentKey={`gallery.dish.${index}.description`}
+                      className="text-white/80 text-sm"
+                      as="p"
+                    >
+                      {dish.description}
+                    </EditableText>
                   </div>
                 </div>
               </CardContent>
