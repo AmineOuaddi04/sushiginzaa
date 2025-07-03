@@ -52,13 +52,13 @@ const Gallery = () => {
     {
       id: 11,
       name: 'Bowl Kaisen Don',
-      image: '/lovable-uploads/26d06a1b-1a4d-4ed1-8aaa-32c86554e978.png',
+      image: '/lovable-uploads/ef76f428-1bbd-420f-8a7f-44fb4d53cb87.png',
       description: 'Bowl de mariscos frescos sobre arroz con salsa especial'
     },
     {
       id: 12,
       name: 'Fideos Con Ternera',
-      image: '/lovable-uploads/bedd25a3-9cb8-41a0-84b6-ea8294767a8c.png',
+      image: '/lovable-uploads/a27c6bff-abe3-40a5-bb08-e4831ee654ff.png',
       description: 'Fideos salteados con ternera y verduras'
     },
     {
@@ -76,7 +76,7 @@ const Gallery = () => {
     {
       id: 15,
       name: 'Ramen Shoyu Clásico',
-      image: '/lovable-uploads/f246d935-94bb-4323-a028-769b2feb1d48.png',
+      image: '/lovable-uploads/51e79f99-bafd-489f-b294-bcd970c4e368.png',
       description: 'Ramen tradicional con caldo de shoyu, chashu y huevo ajitsuke'
     }
   ];

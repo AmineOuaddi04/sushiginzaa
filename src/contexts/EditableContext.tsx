@@ -48,7 +48,7 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.subtitle': 'Cada plato es una obra maestra, elaborada con precisión y pasión',
     'gallery.cta': 'Ver Galería Completa',
     
-    // Gallery dish details - starting from dish.0
+    // Gallery dish details - updated names for dishes 8, 9, 11 with no descriptions
     'gallery.dish.0.name': 'Takoyaki 3U',
     'gallery.dish.0.description': 'Croqueta japonesa de pulpo, mayonesa, salsa okonomiyaki, copos de bonito',
     'gallery.dish.1.name': 'Pad Thai con Ternera',
@@ -63,15 +63,15 @@ export const EditableProvider: React.FC<EditableProviderProps> = ({ children }) 
     'gallery.dish.5.description': 'Huevo, Verdura',
     'gallery.dish.6.name': 'Sushi Moriwase',
     'gallery.dish.6.description': 'Sashimi Salmón x4, nigiri x5, ura x4, gonkan x2',
-    'gallery.dish.7.name': 'Pollo Frito Don',
-    'gallery.dish.7.description': 'Pollo frito, kimchi, sésamo, teriyaki, arroz',
-    'gallery.dish.8.name': 'Fideos Con Ternera',
-    'gallery.dish.8.description': 'Fideos con ternera, huevo y verdura',
+    'gallery.dish.7.name': 'Uramaki Mango',
+    'gallery.dish.7.description': '',
+    'gallery.dish.8.name': 'Milhojas',
+    'gallery.dish.8.description': '',
     'gallery.dish.9.name': 'Salmón Roja',
     'gallery.dish.10.name': 'Salmon Mango 2U',
     'gallery.dish.10.description': 'Salmón, rúcula, salsa mango, mango',
-    'gallery.dish.11.name': 'Ramen De Chasu',
-    'gallery.dish.11.description': 'Con Chasu, huevo marinado, brotes de soja, morillas, cebolletas',
+    'gallery.dish.11.name': 'Uramaki Mango',
+    'gallery.dish.11.description': '',
     
     // Menu content - Updated with new dishes from the image
     'menu.title': 'Nuestro',
