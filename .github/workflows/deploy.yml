@@ -15,16 +15,27 @@ jobs:
 
       - run: npm install
 
-      - run: npm run build
+      - name: Run build
+        run: |
+          echo "🔧 Ejecutando build..."
+          npm run build
 
-      - name: Copy index.html to 404.html
+      - name: Verificar carpeta dist
+        run: |
+          echo "📁 Verificando que la carpeta dist exista..."
+          if [ ! -d "dist" ]; then
+            echo "❌ ERROR: La carpeta 'dist' no fue generada. El build falló."
+            exit 1
+          fi
+          echo "✅ Carpeta dist encontrada:"
+          ls -la dist
+
+      - name: Copiar index.html a 404.html
         run: cp dist/index.html dist/404.html
 
       - name: Debug build output
         run: |
-          echo "Listing contents of the root directory..."
-          ls -la
-          echo "Listing contents of the dist directory..."
+          echo "📁 Contenido del directorio dist:"
           ls -R dist
 
       - name: Deploy to GitHub Pages
