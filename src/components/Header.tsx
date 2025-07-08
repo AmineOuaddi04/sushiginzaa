@@ -1,14 +1,11 @@
 
 import { useState } from 'react';
-import { Menu, X, Edit } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Menu, X } from 'lucide-react';
 import { useEditable } from '@/contexts/EditableContext';
 import EditableText from '@/components/EditableText';
-import { cn } from '@/lib/utils';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isEditMode, setIsEditMode } = useEditable();
 
   const navItems = [
     { label: 'header.nav.inicio', href: '#home' },
@@ -57,22 +54,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Edit Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setIsEditMode(!isEditMode)}
-              className={cn(
-                "transition-colors",
-                isEditMode && "bg-primary text-primary-foreground"
-              )}
-            >
-              <Edit size={16} className="mr-2" />
-              {isEditMode ? 'Exit Edit' : 'Edit'}
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
           <button 
             className="md:hidden p-2 text-foreground hover:text-primary transition-colors" 
@@ -98,20 +79,6 @@ const Header = () => {
                   <EditableText contentKey={item.label} />
                 </a>
               ))}
-              <div className="flex items-center space-x-2 mt-4">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setIsEditMode(!isEditMode)}
-                  className={cn(
-                    "transition-colors",
-                    isEditMode && "bg-primary text-primary-foreground"
-                  )}
-                >
-                  <Edit size={16} className="mr-2" />
-                  {isEditMode ? 'Exit Edit' : 'Edit'}
-                </Button>
-              </div>
             </nav>
           </div>
         )}
