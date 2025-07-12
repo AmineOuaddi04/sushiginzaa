@@ -43,5 +43,5 @@ jobs:
         with:
           github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist
-          cname: sushiginzazlogroño.com
+          cname: sushiginzalogroño.com
           force_orphan: true
